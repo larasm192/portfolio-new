@@ -3,6 +3,10 @@ import { motion } from "framer-motion";
 import arrow2Url from "/arrow-2.svg";
 import arrowUrl from "/arrow.svg";
 import lara1Url from "/lara-1.jpg";
+import ProjectCard from "./components/ProjectCard.jsx";
+import monopolyUrl from "/mini-monopoly.jpg";
+import strideUrl from "/stride.svg";
+import reseatUrl from "/reseat.svg";
 
 export default function App() {
   return (
@@ -65,9 +69,40 @@ export default function App() {
         {/* Project section */}
         <section
           id="about"
-          className="flex min-h-[calc(100vh-4rem)] items-center justify-center bg-pink-50"
+          className="flex min-h-auto flex-col items-center justify-center bg-gray-50"
         >
-          <h2 className="text-2xl">About Me</h2>
+          <motion.div
+            className="flex w-full flex-col items-center"
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }}
+          >
+            <div className="mx-auto mt-3 mr-3 mb-3 ml-3 grid border-collapse grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-2">
+              <ProjectCard
+                title="Mini Monopoly"
+                description="A fully interactive Monopoly game, personalised with custom properties named after my friends."
+                link="#"
+                image={monopolyUrl}
+              />
+              <ProjectCard
+                title="Stride."
+                description="A boundary-detection walking stick, designed to promote confidence and independence in Parkinson's patients."
+                link="#"
+                image={strideUrl}
+              />
+              <ProjectCard
+                title="RESEAT"
+                description="Rethinking economy class seats through a lens of sustainability, comfort, and smarter material use."
+                link="#"
+                image={reseatUrl}
+              />
+              <ProjectCard
+                title="Vehicle & Pipeline Design"
+                description="Optimising aerodynamics of a car and the cooling efficiency of the battery module’s cooling plate."
+                link="#"
+              />
+            </div>
+          </motion.div>
         </section>
 
         {/* Projects section */}
