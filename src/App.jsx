@@ -29,7 +29,7 @@ export default function App() {
               </h1>
               <p className="group relative w-fit text-lg text-gray-600">
                 <img
-                  src={logoUrl || "/public/arrow-2.svg"}
+                  src={arrow2Url || "/public/arrow-2.svg"}
                   alt="me"
                   className="absolute -right-10 -bottom-25 w-40 opacity-0 transition-all duration-500 group-hover:-translate-y-1 group-hover:rotate-[5deg] group-hover:opacity-100"
                 />
