@@ -1,6 +1,8 @@
 import Navbar from "./components/Navbar.jsx";
 import { motion } from "framer-motion";
-import logoUrl from "/arrow-2.svg";
+import arrow2Url from "/arrow-2.svg";
+import arrowUrl from "/arrow.svg";
+import lara1Url from "/lara-1.jpg";
 
 export default function App() {
   return (
@@ -46,13 +48,13 @@ export default function App() {
             <div className="group relative flex flex-[0.3] justify-end">
               {/* Arrow (hidden until hover) */}
               <img
-                src="/public/arrow.svg"
+                src={arrowUrl || "/public/arrow.svg"}
                 alt="me"
                 className="absolute -top-35 -right-15 w-40 opacity-0 transition-all duration-500 group-hover:-translate-y-1 group-hover:rotate-[5deg] group-hover:opacity-100"
               />
 
               <img
-                src="/public/lara-1.jpg"
+                src={lara1Url || "/public/lara-1.jpg"}
                 alt="Lara Merican"
                 className="h-64 w-64 rounded-4xl object-cover shadow-lg transition-shadow duration-300 hover:scale-101 hover:shadow-2xl hover:shadow-orange-500"
               />
