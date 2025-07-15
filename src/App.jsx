@@ -26,7 +26,7 @@ export default function App() {
               </h1>
               <p className="group relative w-fit text-lg text-gray-600">
                 <img
-                  src="/src/assets/arrow-2.svg"
+                  src="/public/arrow-2.svg"
                   alt="me"
                   className="absolute -right-10 -bottom-25 w-40 opacity-0 transition-all duration-500 group-hover:-translate-y-1 group-hover:rotate-[5deg] group-hover:opacity-100"
                 />
@@ -45,13 +45,13 @@ export default function App() {
             <div className="group relative flex flex-[0.3] justify-end">
               {/* Arrow (hidden until hover) */}
               <img
-                src="/src/assets/arrow.svg"
+                src="/public/arrow.svg"
                 alt="me"
                 className="absolute -top-35 -right-15 w-40 opacity-0 transition-all duration-500 group-hover:-translate-y-1 group-hover:rotate-[5deg] group-hover:opacity-100"
               />
 
               <img
-                src="/src/assets/lara-1.jpg"
+                src="/public/lara-1.jpg"
                 alt="Lara Merican"
                 className="h-64 w-64 rounded-4xl object-cover shadow-lg transition-shadow duration-300 hover:scale-101 hover:shadow-2xl hover:shadow-orange-500"
               />
