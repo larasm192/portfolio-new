@@ -4,20 +4,26 @@ export default function Navbar() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
           {/* Logo / Name */}
-          <div className="text-xl font-semibold tracking-tight text-gray-800">
+          <a
+            className="text-xl font-semibold tracking-tight text-gray-800"
+            href="/"
+          >
             Lara Merican
-          </div>
+          </a>
 
           {/* Navigation links */}
           <div className="hidden space-x-8 text-sm text-gray-600 md:flex">
-            <a href="#about" className="transition hover:text-black">
-              About
+            <a href="/" className="transition hover:text-black">
+              Home
             </a>
-            <a href="#projects" className="transition hover:text-black">
+            <a href="/projects" className="transition hover:text-black">
               Projects
             </a>
-            <a href="#contact" className="transition hover:text-black">
-              Contact
+            <a href="/music" className="transition hover:text-black">
+              Music
+            </a>
+            <a href="/me" className="transition hover:text-black">
+              Me
             </a>
           </div>
         </div>

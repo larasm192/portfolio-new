@@ -1,9 +1,7 @@
 export default function ProjectCardv2({
   title,
   description,
-  skill1,
-  skill2,
-  skill3,
+  skills = [],
   link,
   image,
 }) {
@@ -22,13 +20,13 @@ export default function ProjectCardv2({
           </div>
           <div className="flex flex-wrap gap-2">
             <div className="flex size-fit items-center justify-between rounded-3xl bg-orange-500 pt-2 pr-5 pb-2 pl-5 text-xs text-white">
-              {skill1}
+              {skills[0]}
             </div>
             <div className="flex size-fit items-center justify-between rounded-3xl bg-orange-500 pt-2 pr-5 pb-2 pl-5 text-xs text-white">
-              {skill2}
+              {skills[1]}
             </div>
             <div className="flex size-fit items-center justify-between rounded-3xl bg-orange-500 pt-2 pr-5 pb-2 pl-5 text-xs text-white">
-              {skill3}
+              {skills[2]}
             </div>
           </div>
         </div>
