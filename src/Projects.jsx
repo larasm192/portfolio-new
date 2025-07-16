@@ -45,7 +45,7 @@ export default function Projects() {
               <ProjectCardv2
                 title="Mini Monopoly"
                 description="A fully interactive Monopoly game, personalised with custom properties named after my friends."
-                link="/Monopoly"
+                link="/monopoly"
                 image={monopolyUrl}
                 skill1="HTML"
                 skill2="CSS"
@@ -54,7 +54,7 @@ export default function Projects() {
               <ProjectCardv2
                 title="Stride."
                 description="A boundary-detection walking stick, designed to promote confidence and independence in Parkinson's patients."
-                link="/Stride"
+                link="/stride"
                 image={strideUrl}
                 skill1="Arduino (C++)"
                 skill2="User-Centred Design"
@@ -63,7 +63,7 @@ export default function Projects() {
               <ProjectCardv2
                 title="RESEAT"
                 description="Rethinking economy class seats through a lens of sustainability, comfort, and smarter material use."
-                link="/Reseat"
+                link="/reseat"
                 image={reseatUrl}
                 skill1="Sustainability"
                 skill2="Fusion"

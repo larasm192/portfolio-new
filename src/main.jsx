@@ -14,8 +14,8 @@ createRoot(document.getElementById("root")).render(
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/projects" element={<Projects />} />
-        <Route path="/Monopoly" element={<Monopoly />} />
-        <Route path="/Stride" element={<Stride />} />
+        <Route path="/monopoly" element={<Monopoly />} />
+        <Route path="/stride" element={<Stride />} />
         <Route path="/reseat" element={<Reseat />} />
       </Routes>
     </BrowserRouter>
