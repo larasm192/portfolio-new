@@ -6,7 +6,7 @@ export default function ProjectCard({ title, description, link, image }) {
     >
       <div className="flex h-full w-full flex-col items-center justify-between rounded-xl p-2">
         <div className="text-center">
-          <h3 className="mb-2 text-4xl font-semibold">{title}</h3>
+          <h3 className="mb-2 text-3xl font-semibold">{title}</h3>
           <p className="mb-4 text-lg font-light">{description}</p>
         </div>
         <a

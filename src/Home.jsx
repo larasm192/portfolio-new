@@ -2,13 +2,16 @@ import Navbar from "./components/Navbar.jsx";
 import { motion } from "framer-motion";
 import arrow2Url from "/arrow-2.svg";
 import arrowUrl from "/arrow.svg";
+import arrow3Url from "/arrow-3.svg";
 import lara1Url from "/lara-1.jpg";
 import ProjectCard from "./components/ProjectCard.jsx";
+import ProjectCardv2 from "./components/ProjectCard-v2.jsx";
+import ProjectCardv3 from "./components/ProjectCard-v3.jsx";
 import monopolyUrl from "/mini-monopoly.jpg";
 import strideUrl from "/stride.svg";
 import reseatUrl from "/reseat.svg";
 
-export default function App() {
+export default function Home() {
   return (
     <>
       <Navbar />
@@ -78,29 +81,55 @@ export default function App() {
             transition={{ duration: 1 }}
           >
             <div className="mx-auto mt-3 mr-3 mb-3 ml-3 grid border-collapse grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-2">
-              <ProjectCard
+              <ProjectCardv2
                 title="Mini Monopoly"
                 description="A fully interactive Monopoly game, personalised with custom properties named after my friends."
-                link="#"
+                link="/Monopoly"
                 image={monopolyUrl}
+                skill1="HTML"
+                skill2="CSS"
+                skill3="JavaScript"
               />
-              <ProjectCard
+              <ProjectCardv2
                 title="Stride."
                 description="A boundary-detection walking stick, designed to promote confidence and independence in Parkinson's patients."
-                link="#"
+                link="/Stride"
                 image={strideUrl}
+                skill1="Arduino (C++)"
+                skill2="User-Centred Design"
+                skill3="Prototyping"
               />
-              <ProjectCard
+              <ProjectCardv2
                 title="RESEAT"
                 description="Rethinking economy class seats through a lens of sustainability, comfort, and smarter material use."
-                link="#"
+                link="/Reseat"
                 image={reseatUrl}
+                skill1="Sustainability"
+                skill2="Fusion"
+                skill3="Product Teardown"
               />
               <ProjectCard
                 title="Vehicle & Pipeline Design"
                 description="Optimising aerodynamics of a car and the cooling efficiency of the battery module’s cooling plate."
                 link="#"
               />
+            </div>
+
+            <div className="group relative flex size-fit flex-[0.3] justify-end">
+              {/* Arrow (hidden until hover) */}
+              <img
+                src={arrow3Url || "/public/arrow-3.svg"}
+                alt="me"
+                className="absolute -right-50 -bottom-0 w-80 opacity-0 transition-all duration-500 group-hover:-translate-y-1 group-hover:rotate-[5deg] group-hover:opacity-100"
+              />
+
+              <a
+                className="mt-5 mb-5 flex size-fit items-center justify-between rounded-4xl border-2 border-orange-500 bg-white pt-3 pr-5 pb-3 pl-5 text-base text-orange-500 hover:bg-orange-500 hover:text-white"
+                href="/projects"
+                rel="noopener noreferrer"
+              >
+                See More Projects
+              </a>
             </div>
           </motion.div>
         </section>
