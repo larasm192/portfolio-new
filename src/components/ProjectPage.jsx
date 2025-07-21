@@ -1,66 +1,104 @@
-import Navbar from "./Navbar.jsx";
-import { motion } from "framer-motion";
-import arrow2Url from "/arrow-2.svg";
-import arrowUrl from "/arrow.svg";
-import lara1Url from "/lara-1.jpg";
+import Navbar from "./Navbar";
+import Sidebar from "./Sidebar";
+import { useState, useEffect } from "react";
 
-export default function ProjectPage({ title }) {
+import ProblemSection from "./sections/ProblemSection";
+import InsightsSection from "./sections/InsightsSection";
+import IdeationSection from "./sections/IdeationSection";
+import TestingSection from "./sections/TestingSection";
+import ConclusionSection from "./sections/ConclusionSection";
+
+export default function ProjectPage({
+  title,
+  link,
+  description,
+  role,
+  tools,
+  timeframe,
+  image,
+  sections,
+  sectionComponents, // new prop
+}) {
+  const [activeSection, setActiveSection] = useState("overview");
+  const [scrollProgress, setScrollProgress] = useState(0);
+
+  const getSectionOffset = (id) => {
+    const el = document.getElementById(id);
+    return el ? el.offsetTop : 0;
+  };
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+      const windowHeight = window.innerHeight;
+      const fullHeight = document.body.scrollHeight - windowHeight;
+      const progress = (scrollY / fullHeight) * 100;
+      setScrollProgress(progress);
+
+      for (let i = sections.length - 1; i >= 0; i--) {
+        const sectionTop = getSectionOffset(sections[i].id);
+        if (scrollY + 100 >= sectionTop) {
+          setActiveSection(sections[i].id);
+          break;
+        }
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    handleScroll();
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <>
       <Navbar />
+      <div className="flex pt-16">
+        <Sidebar
+          sections={sections}
+          activeSection={activeSection}
+          scrollProgress={scrollProgress}
+        />
 
-      <main className="pt-16">
-        {/* Hero or intro */}
-        <section className="flex min-h-[calc(100vh-4rem)] items-center justify-center bg-white text-gray-800">
-          <motion.div
-            className="flex w-full max-w-6xl items-center justify-between px-8"
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1 }}
-          >
-            {/* Slogan on the left */}
-            <div className="flex-[0.7]">
-              <h1 className="mb-4 text-8xl font-bold">
-                This is{" "}
-                <span className="bg-gradient-to-r from-orange-300 to-orange-500 bg-clip-text text-transparent">
-                  {title}{" "}
-                </span>
-              </h1>
-              <p className="group relative w-fit text-lg text-gray-600">
-                <img
-                  src={arrow2Url || "/public/arrow-2.svg"}
-                  alt="me"
-                  className="absolute -right-10 -bottom-25 w-40 opacity-0 transition-all duration-500 group-hover:-translate-y-1 group-hover:rotate-[5deg] group-hover:opacity-100"
-                />
-                Design Engineering Student{" "}
-                <a
-                  className="bg-gradient-to-r from-orange-300 to-orange-500 bg-clip-text text-transparent opacity-0 transition-all duration-300 group-hover:opacity-100"
-                  href="https://lnk.bio/eklsm"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  & Singer-Songwriter!
-                </a>
-              </p>
+        <main className="flex-1 px-4 pb-20 md:px-20">
+          <section className="pt-10" id="overview">
+            <h1 className="text-4xl font-semibold md:text-5xl">{title}</h1>
+            <a
+              className="mt-2 text-xs text-gray-500 underline"
+              href={link}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              View on GitHub
+            </a>
+            <img className="mt-6 h-48 w-full rounded-lg md:h-60" src={image} />
+            <div className="mt-10 flex gap-6">
+              <div className="w-[calc(200%/3)] bg-white p-4 shadow">
+                <h2 className="mb-2 text-2xl font-medium">Overview</h2>
+                <p className="text-base text-gray-700">{description}</p>
+              </div>
+              <div className="grid w-fit flex-1/2 grid-cols-1 gap-4">
+                <div className="bg-white p-4 shadow">
+                  <h4 className="text-sm font-semibold">My Role</h4>
+                  <p className="text-xs text-gray-600">{role}</p>
+                </div>
+                <div className="bg-white p-4 shadow">
+                  <h4 className="text-sm font-semibold">Tools</h4>
+                  <p className="text-xs text-gray-600">{tools}</p>
+                </div>
+                <div className="bg-white p-4 shadow">
+                  <h4 className="text-sm font-semibold">Timeframe</h4>
+                  <p className="text-xs text-gray-600">{timeframe}</p>
+                </div>
+              </div>
             </div>
-            {/* Image on the right */}
-            <div className="group relative flex flex-[0.3] justify-end">
-              {/* Arrow (hidden until hover) */}
-              <img
-                src={arrowUrl || "/public/arrow.svg"}
-                alt="me"
-                className="absolute -top-35 -right-15 w-40 opacity-0 transition-all duration-500 group-hover:-translate-y-1 group-hover:rotate-[5deg] group-hover:opacity-100"
-              />
-
-              <img
-                src={lara1Url || "/public/lara-1.jpg"}
-                alt="Lara Merican"
-                className="h-64 w-64 rounded-4xl object-cover shadow-lg transition-shadow duration-300 hover:scale-101 hover:shadow-2xl hover:shadow-orange-500"
-              />
-            </div>
-          </motion.div>
-        </section>
-      </main>
+          </section>
+          {/* Render custom section components */}
+          {sectionComponents?.map((SectionComponent, idx) => (
+            <SectionComponent key={idx} />
+          ))}
+        </main>
+      </div>
     </>
   );
 }

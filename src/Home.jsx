@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import arrow2Url from "/arrow-2.svg";
 import arrowUrl from "/arrow.svg";
 import arrow3Url from "/arrow-3.svg";
+import arrow4Url from "/arrow-4.svg";
 import lara1Url from "/lara-1.jpg";
 import ProjectCard from "./components/ProjectCard.jsx";
 import ProjectCardv2 from "./components/ProjectCard-v2.jsx";
@@ -10,6 +11,10 @@ import ProjectCardv3 from "./components/ProjectCard-v3.jsx";
 import monopolyUrl from "/mini-monopoly.jpg";
 import strideUrl from "/stride.svg";
 import reseatUrl from "/reseat.svg";
+import MusicCard from "./components/MusicCard.jsx";
+import firstlovethingsUrl from "/first-love-things.jpg";
+import Music from "./Music.jsx";
+import linkedinUrl from "/linkedin.png";
 
 export default function Home() {
   return (
@@ -43,7 +48,6 @@ export default function Home() {
                 Design Engineering Student{" "}
                 <a
                   className="bg-gradient-to-r from-orange-300 to-orange-500 bg-clip-text text-transparent opacity-0 transition-all duration-300 group-hover:opacity-100"
-                  href="https://lnk.bio/eklsm"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -70,10 +74,7 @@ export default function Home() {
         </section>
 
         {/* Project section */}
-        <section
-          id="about"
-          className="flex min-h-auto flex-col items-center justify-center bg-gray-50"
-        >
+        <section className="flex min-h-auto flex-col items-center justify-center bg-gray-50">
           <motion.div
             className="flex w-full flex-col items-center"
             initial={{ opacity: 0, y: 40 }}
@@ -102,10 +103,12 @@ export default function Home() {
                 image={reseatUrl}
                 skills={["Sustainability", "Fusion", "Product Teardown"]}
               />
-              <ProjectCard
-                title="Vehicle & Pipeline Design"
-                description="Optimising aerodynamics of a car and the cooling efficiency of the battery module’s cooling plate."
-                link="#"
+              <ProjectCardv2
+                title="Portfolio v3"
+                description="My personal portfolio website (this one!), showcasing my projects and skills."
+                link="/portfolio-v3"
+                image={monopolyUrl}
+                skills={["React", "Vite", "Tailwind CSS"]}
               />
             </div>
 
@@ -118,7 +121,7 @@ export default function Home() {
               />
 
               <a
-                className="mt-5 mb-5 flex size-fit items-center justify-between rounded-4xl border-2 border-orange-500 bg-white pt-3 pr-5 pb-3 pl-5 text-base text-orange-500 hover:bg-orange-500 hover:text-white"
+                className="mt-8 mb-8 flex size-fit items-center justify-between rounded-4xl border-2 border-orange-500 bg-white pt-3 pr-5 pb-3 pl-5 text-base text-orange-500 hover:bg-orange-500 hover:text-white"
                 href="/projects"
                 rel="noopener noreferrer"
               >
@@ -128,20 +131,96 @@ export default function Home() {
           </motion.div>
         </section>
 
-        {/* Projects section */}
-        <section
-          id="projects"
-          className="flex min-h-[calc(100vh-4rem)] items-center justify-center bg-blue-50"
-        >
-          <h2 className="text-2xl">Projects</h2>
+        {/* Music section */}
+        <section className="flex min-h-150 items-center justify-center border-12 border-white bg-gray-50">
+          <motion.div
+            className="flex w-full max-w-6xl items-center justify-between px-8"
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }}
+          >
+            {/* Image on the left */}
+            <div className="group relative flex flex-[0.3] justify-end">
+              {/* Arrow (hidden until hover) */}
+              <img
+                src={arrow4Url || "/public/arrow-4.svg"}
+                alt="me"
+                className="absolute -right-60 -bottom-5 w-50 opacity-0 transition-all duration-500 group-hover:-translate-y-1 group-hover:rotate-[5deg] group-hover:opacity-100"
+              />
+
+              <MusicCard
+                title="first love things"
+                artist="EKLSM"
+                link="https://album.link/eklsm-firstlovethings"
+                image={firstlovethingsUrl}
+                date="Released on 24th January 2025"
+              />
+            </div>
+
+            {/* Slogan on the right */}
+            <div className="flex flex-[0.7] flex-col items-end text-right text-black">
+              <h1 className="mb-4 text-6xl font-bold">
+                Engineering by{" "}
+                <span className="bg-gradient-to-r from-orange-300 to-orange-500 bg-clip-text text-transparent">
+                  day
+                </span>{" "}
+                <br></br>
+                music by{" "}
+                <span className="bg-gradient-to-r from-blue-300 to-purple-500 bg-clip-text text-transparent">
+                  night
+                </span>{" "}
+              </h1>
+              <a
+                className="mt-8 flex size-fit items-center justify-between rounded-4xl border-2 border-purple-500 bg-transparent pt-3 pr-5 pb-3 pl-5 text-base text-purple-500 hover:bg-purple-500 hover:text-white"
+                href="/music"
+                rel="noopener noreferrer"
+              >
+                See More Music
+              </a>
+            </div>
+          </motion.div>
         </section>
 
         {/* Contact section */}
-        <section
-          id="contact"
-          className="flex min-h-[calc(100vh-4rem)] items-center justify-center bg-green-50"
-        >
-          <h2 className="text-2xl">Contact</h2>
+        <section className="flex min-h-50 items-center justify-center bg-white">
+          <div className="flex w-full max-w-6xl items-center justify-center gap-2 px-8">
+            <a
+              className="aspect-square h-10"
+              href="https://www.linkedin.com/in/lara-merican/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src={linkedinUrl}
+                alt="LinkedIn"
+                className="aspect-square h-full w-full rounded-xl object-cover"
+              />
+            </a>
+            <a
+              className="aspect-square h-10"
+              href="mailto:mericanlara@gmail.com"
+            >
+              <img
+                width="50"
+                height="50"
+                src="https://img.icons8.com/material-rounded/50/mail.png"
+                alt="mail"
+              />
+            </a>
+            <a
+              className="aspect-square h-10"
+              href="http://github.com/larasm192/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                width="50"
+                height="50"
+                src="https://img.icons8.com/ios-glyphs/50/github.png"
+                alt="github"
+              />
+            </a>
+          </div>
         </section>
       </main>
     </>
