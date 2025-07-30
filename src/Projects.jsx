@@ -1,5 +1,5 @@
 import Navbar from "./components/Navbar.jsx";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion as Motion, AnimatePresence } from "framer-motion";
 import ProjectCardv2 from "./components/ProjectCard-v2.jsx";
 import monopolyUrl from "/mini-monopoly.jpg";
 import strideUrl from "/stride.svg";
@@ -195,7 +195,7 @@ export default function Projects() {
 
       <main className="pt-16">
         <section className="flex">
-          <motion.div
+          <Motion.div
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
@@ -222,12 +222,12 @@ export default function Projects() {
                 ))}
               </div>
             </div>
-          </motion.div>
+          </Motion.div>
         </section>
 
         {/* Project section */}
         <section className="flex min-h-auto flex-col items-center justify-center bg-gray-50">
-          <motion.div
+          <Motion.div
             className="flex w-full flex-col items-center"
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
@@ -236,7 +236,7 @@ export default function Projects() {
             <div className="mx-auto mt-3 mr-3 mb-3 ml-3 grid border-collapse grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-2">
               <AnimatePresence mode="wait">
                 {filteredProjects.map((project) => (
-                  <motion.div
+                  <Motion.div
                     key={`${project.title}-${activeFilter}`} // Use a unique key
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -249,7 +249,7 @@ export default function Projects() {
                       image={project.image}
                       skills={project.skills}
                     />
-                  </motion.div>
+                  </Motion.div>
                 ))}
               </AnimatePresence>
             </div>
@@ -261,7 +261,7 @@ export default function Projects() {
             >
               Back to Home
             </a>
-          </motion.div>
+          </Motion.div>
         </section>
       </main>
     </>
