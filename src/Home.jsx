@@ -1,5 +1,5 @@
 import Navbar from "./components/Navbar.jsx";
-import { motion } from "framer-motion";
+import { motion as Motion } from "framer-motion";
 import arrow2Url from "/arrow-2.svg";
 import arrowUrl from "/arrow.svg";
 import arrow3Url from "/arrow-3.svg";
@@ -24,7 +24,7 @@ export default function Home() {
       <main className="pt-16">
         {/* Hero or intro */}
         <section className="flex min-h-[calc(100vh-4rem)] items-center justify-center bg-white text-gray-800">
-          <motion.div
+          <Motion.div
             className="flex w-full max-w-6xl items-center justify-between px-8"
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
@@ -70,12 +70,12 @@ export default function Home() {
                 className="h-64 w-64 rounded-4xl object-cover shadow-lg transition-shadow duration-300 hover:scale-101 hover:shadow-2xl hover:shadow-orange-500"
               />
             </div>
-          </motion.div>
+          </Motion.div>
         </section>
 
         {/* Project section */}
         <section className="flex min-h-auto flex-col items-center justify-center bg-gray-50">
-          <motion.div
+          <Motion.div
             className="flex w-full flex-col items-center"
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
@@ -128,12 +128,12 @@ export default function Home() {
                 See More Projects
               </a>
             </div>
-          </motion.div>
+          </Motion.div>
         </section>
 
         {/* Music section */}
         <section className="flex min-h-150 items-center justify-center border-12 border-white bg-gray-50">
-          <motion.div
+          <Motion.div
             className="flex w-full max-w-6xl items-center justify-between px-8"
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
@@ -178,7 +178,7 @@ export default function Home() {
                 See More Music
               </a>
             </div>
-          </motion.div>
+          </Motion.div>
         </section>
 
         {/* Contact section */}

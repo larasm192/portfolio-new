@@ -1,10 +1,8 @@
 import Navbar from "./components/Navbar.jsx";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion as Motion, AnimatePresence } from "framer-motion";
 import MusicCard from "./components/MusicCard.jsx";
 import monopolyUrl from "/mini-monopoly.jpg";
 import strideUrl from "/stride.svg";
-import reseatUrl from "/reseat.svg";
-import lara1Url from "/lara-1.jpg";
 import { useState } from "react";
 
 const allProjects = [
@@ -50,7 +48,7 @@ export default function Music() {
 
       <main className="pt-16">
         <section className="flex" id="all-projects">
-          <motion.div
+          <Motion.div
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
@@ -77,12 +75,12 @@ export default function Music() {
                 ))}
               </div>
             </div>
-          </motion.div>
+          </Motion.div>
         </section>
 
         {/* Project section */}
         <section className="flex min-h-auto flex-col items-center justify-center bg-gray-50">
-          <motion.div
+          <Motion.div
             className="flex w-full flex-col items-center"
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
@@ -91,14 +89,20 @@ export default function Music() {
             <div className="mx-auto mt-3 mr-3 mb-3 ml-3 grid border-collapse grid-cols-1 gap-3 sm:grid-cols-3 lg:grid-cols-3">
               <AnimatePresence mode="wait">
                 {filteredProjects.map((project) => (
-                  <motion.div
+                  <Motion.div
                     key={`${project.title}-${activeFilter}`} // Use a unique key
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.7 }}
                   >
-                    <MusicCard link={project.link} />
-                  </motion.div>
+                    <MusicCard
+                      title={project.title}
+                      artist={project.description}
+                      image={project.image}
+                      link={project.link}
+                      date={project.date}
+                    />
+                  </Motion.div>
                 ))}
               </AnimatePresence>
             </div>
@@ -110,7 +114,7 @@ export default function Music() {
             >
               Back to Home
             </a>
-          </motion.div>
+          </Motion.div>
         </section>
       </main>
     </>
