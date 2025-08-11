@@ -71,7 +71,10 @@ export default function ProjectPage({
             >
               View on GitHub
             </a>
-            <img className="mt-6 h-48 w-full rounded-lg md:h-60" src={image} />
+            <img
+              className="mt-6 h-48 w-full rounded-xl object-cover md:h-60"
+              src={image}
+            />
             <div className="mt-10 flex gap-6">
               <div className="w-[calc(200%/3)] bg-white p-4 shadow">
                 <h2 className="mb-2 text-2xl font-medium">Overview</h2>

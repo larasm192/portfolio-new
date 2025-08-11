@@ -6,6 +6,20 @@ import strideUrl from "/stride.svg";
 import reseatUrl from "/reseat.svg";
 import lara1Url from "/lara-1.jpg";
 import { useState } from "react";
+import vehicle2Url from "/vehicle2.svg";
+import dfpUrl from "/dfp.svg";
+import vehicleUrl from "/vehicle.svg";
+import watertightUrl from "/watertight.svg";
+import materialiseUrl from "/materialise.svg";
+import bouncerUrl from "/bouncer.svg";
+import revengUrl from "/reveng.svg";
+import ifeUrl from "/ife.svg";
+import pcsUrl from "/pcs.svg";
+import revolveUrl from "/revolve.svg";
+import electricarUrl from "/electricar.svg";
+import dancingsegUrl from "/dancingseg.svg";
+import flexicookUrl from "/flexicook.svg";
+import hnmUrl from "/h&m.svg";
 
 const allProjects = [
   {
@@ -39,8 +53,8 @@ const allProjects = [
     title: "Vehicle Design Portfolio 2",
     description:
       "Optimised the aerodynamics of a vehicle using thermofluid simulations to improve performance.",
-    link: "/unfinishedproject",
-    image: lara1Url,
+    link: "/vehicle2",
+    image: vehicle2Url,
     skills: ["Fusion 360", "Thermofluids", "CFD"],
     tags: ["engineering"],
   },
@@ -49,7 +63,7 @@ const allProjects = [
     description:
       "Programmed a mini-Segway robot to dance in sync with music using beat detection and PID balance control.",
     link: "/unfinishedproject",
-    image: lara1Url,
+    image: dancingsegUrl,
     skills: ["Python", "Audio Analysis", "Embedded Systems"],
     tags: ["electronics"],
   },
@@ -57,8 +71,8 @@ const allProjects = [
     title: "Devices for Parkinson’s",
     description:
       "Designed assistive mobility devices to improve safety and independence for Parkinson’s patients.",
-    link: "/unfinishedproject",
-    image: lara1Url,
+    link: "/dfp",
+    image: dfpUrl,
     skills: ["User-Centred Design", "Fusion 360", "User Research"],
     tags: ["product-design", "electronics"],
   },
@@ -66,8 +80,8 @@ const allProjects = [
     title: "Vehicle Design Portfolio",
     description:
       "Designed and analysed vehicle components to optimise structural performance and cooling efficiency.",
-    link: "/unfinishedproject",
-    image: lara1Url,
+    link: "/vehicle",
+    image: vehicleUrl,
     skills: ["Fusion 360", "SolidWorks", "Thermofluids"],
     tags: ["engineering"],
   },
@@ -85,7 +99,7 @@ const allProjects = [
     description:
       "Built a physical computing system using sensors and motors to perform a rotating action triggered by light.",
     link: "/unfinishedproject",
-    image: lara1Url,
+    image: revolveUrl,
     skills: ["Arduino (C++)", "Sensors", "Physical Computing"],
     tags: ["electronics", "sustainability"],
   },
@@ -94,7 +108,7 @@ const allProjects = [
     description:
       "Created a flexible cooking product concept for students living in shared kitchen environments.",
     link: "/unfinishedproject",
-    image: lara1Url,
+    image: flexicookUrl,
     skills: ["Prototyping", "User-Centred Design", "Sketch Modelling"],
     tags: ["product-design"],
   },
@@ -103,7 +117,7 @@ const allProjects = [
     description:
       "Predicted crash survivability using machine learning on aviation datasets.",
     link: "/unfinishedproject",
-    image: lara1Url,
+    image: pcsUrl,
     skills: ["Python", "pandas", "scikit-learn"],
     tags: ["software"],
   },
@@ -112,7 +126,7 @@ const allProjects = [
     description:
       "Designed and programmed an autonomous car using sensors and control logic.",
     link: "/unfinishedproject",
-    image: lara1Url,
+    image: electricarUrl,
     skills: ["ESP32", "Python", "Bluetooth"],
     tags: ["electronics"],
   },
@@ -121,7 +135,7 @@ const allProjects = [
     description:
       "Designed solutions to improve food experiences for university athletes through HCD processes.",
     link: "/unfinishedproject",
-    image: lara1Url,
+    image: ifeUrl,
     skills: ["Design Research", "User-Centred Design", "Prototyping"],
     tags: ["product-design"],
   },
@@ -130,7 +144,7 @@ const allProjects = [
     description:
       "Reverse engineered a consumer product to understand manufacturing processes and material choices.",
     link: "/unfinishedproject",
-    image: lara1Url,
+    image: revengUrl,
     skills: ["CAD", "Product Teardown", "Manufacturing Analysis"],
     tags: ["engineering"],
   },
@@ -139,7 +153,7 @@ const allProjects = [
     description:
       "Designed and simulated a device to launch a ping pong ball to a target using solid mechanics principles.",
     link: "/unfinishedproject",
-    image: lara1Url,
+    image: bouncerUrl,
     skills: ["Solid Mechanics", "MATLAB", "Simulation"],
     tags: ["engineering"],
   },
@@ -148,7 +162,7 @@ const allProjects = [
     description:
       "Analysed and critiqued H&M’s approach to achieving net zero carbon emissions.",
     link: "/unfinishedproject",
-    image: lara1Url,
+    image: hnmUrl,
     skills: ["Sustainability", "Critical Thinking", "Research"],
     tags: ["sustainability"],
   },
@@ -157,7 +171,7 @@ const allProjects = [
     description:
       "Explored materials used in consumer products and their impact on performance and sustainability.",
     link: "/unfinishedproject",
-    image: lara1Url,
+    image: materialiseUrl,
     skills: ["Materials", "Manufacturing", "Design for Environment"],
     tags: ["engineering"],
   },
@@ -166,7 +180,7 @@ const allProjects = [
     description:
       "Designed a solution to help users identify water usage habits and reduce waste.",
     link: "/unfinishedproject",
-    image: lara1Url,
+    image: watertightUrl,
     skills: ["Design Thinking", "Human-Centred Design", "Prototyping"],
     tags: ["product-design"],
   },

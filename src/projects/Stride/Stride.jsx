@@ -1,5 +1,6 @@
 import ProjectPage from "../../components/ProjectPage.jsx";
 import monopolyUrl from "/mini-monopoly.jpg";
+import strideBanner from "/stride-banner.svg";
 import StrideProblem from "./StrideProblem.jsx";
 
 // Import custom sections
@@ -23,8 +24,8 @@ export default function Stride() {
       role="COO & Electronics Lead"
       tools="Arduino Nano, clickUp, Figma, C++, Prototyping, User-Centred Design"
       timeframe="May 2025 - June 2025"
-      description="Mini Monopoly is a fully playable, two‑player browser version I built from the ground up to deepen my front‑end development skills and share a customised board game with friends. Motivated to create my own Monopoly variant, I hand‑crafted personalised property cards, used responsive CSS techniques and implemented challenging mechanics, like multi‑turn jail logic and rent doubling for complete colour sets. With keyboard controls and accessibility best practices, it blends technical rigour and playful design."
-      image={monopolyUrl}
+      description="Stride is a smart, boundary-detecting walking stick designed to support Parkinson’s patients experiencing Freezing of Gait (FoG)—a condition that disrupts walking and undermines independence. Motivated by real patient observations and clinical literature, our team developed a discreet, ergonomic stick that offers visual and haptic cues to help users resume movement. Over 10 weeks, we ideated, prototyped, and refined the design through rigorous testing, resulting in a functional proof-of-concept ready for further validation."
+      image={strideBanner}
       sections={sections}
       sectionComponents={sectionComponents}
     />

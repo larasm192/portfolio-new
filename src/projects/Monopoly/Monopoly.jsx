@@ -1,5 +1,6 @@
 import ProjectPage from "../../components/ProjectPage";
 import monopolyUrl from "/mini-monopoly.jpg";
+import monopolyBanner from "/monopoly-banner.svg";
 
 // Import custom sections
 import MonopolyProblem from "./MonopolyProblem.jsx";
@@ -26,7 +27,7 @@ export default function Monopoly() {
       tools="HTML, CSS, JavaScript, JSDocs, Ramda.js, Figma, Mocha"
       timeframe="May 2025 - June 2025"
       description="Mini Monopoly is a fully playable, two‑player browser version I built from the ground up to deepen my front‑end development skills and share a customised board game with friends. Motivated to create my own Monopoly variant, I hand‑crafted personalised property cards, used responsive CSS techniques and implemented challenging mechanics, like multi‑turn jail logic and rent doubling for complete colour sets. With keyboard controls and accessibility best practices, it blends technical rigour and playful design."
-      image={monopolyUrl}
+      image={monopolyBanner}
       sections={sections}
       sectionComponents={sectionComponents}
     />

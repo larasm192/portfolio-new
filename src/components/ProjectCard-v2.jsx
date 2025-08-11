@@ -7,7 +7,7 @@ export default function ProjectCardv2({
 }) {
   return (
     <a
-      className="flex rounded-xl bg-white shadow-lg transition-transform duration-300 hover:scale-101 hover:shadow-2xl hover:shadow-orange-300"
+      className="flex items-center rounded-xl bg-white shadow-lg transition-transform duration-300 hover:scale-101 hover:shadow-2xl hover:shadow-orange-300"
       href={link}
       rel="noopener noreferrer"
     >
