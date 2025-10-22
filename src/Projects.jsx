@@ -1,7 +1,7 @@
 import Navbar from "./components/Navbar.jsx";
 import { motion as Motion, AnimatePresence } from "framer-motion";
 import ProjectCardv2 from "./components/ProjectCard-v2.jsx";
-import monopolyUrl from "/mini-monopoly.jpg";
+import monopolyUrl from "/monopoly-render.png";
 import strideUrl from "/stride.svg";
 import reseatUrl from "/reseat.svg";
 import lara1Url from "/lara-1.jpg";

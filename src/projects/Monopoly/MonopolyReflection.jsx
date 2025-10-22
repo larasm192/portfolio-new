@@ -3,7 +3,7 @@ import logicUrl from "/logic.png";
 import accessibilityUrl from "/accessibility.png";
 import { SectionDivider } from "../../components/sections/ProjectComponents.jsx";
 
-export default function StrideProblem() {
+export default function MonopolyReflectionSection() {
   const items = [
     {
       img: codingUrl,
@@ -26,10 +26,11 @@ export default function StrideProblem() {
   ];
 
   return (
-    <section id="challenge" className="bg-neutral-50">
-      <SectionDivider label="The Challenge" />
-      <div className="mx-auto max-w-6xl px-6 pb-20">
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
+    <section id="reflection" className="bg-neutral-50 px-8 py-12 md:px-24">
+      <div className="mx-auto max-w-6xl">
+        <SectionDivider label="Reflections" />
+
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
           {items.map((item, i) => (
             <div
               key={i}
@@ -38,7 +39,7 @@ export default function StrideProblem() {
               <img
                 src={item.img}
                 alt={item.alt}
-                className="mb-4 h-12 w-12 object-cover"
+                className="mb-4 h-12 w-12 object-contain"
               />
               <h3 className="mb-2 text-xl font-semibold">{item.title}</h3>
               <p className="text-sm text-neutral-700">{item.text}</p>
