@@ -1,25 +1,13 @@
-import Navbar from "../../components/Navbar";
-import Sidebar from "../../components/Sidebar";
-import { useState, useEffect } from "react";
-import {
-  Badge,
-  MiniStat,
-  Summary,
-  Button,
-} from "../../components/sections/ProjectComponents.jsx";
-import MonopolyImage from "/monopoly-render.png";
-
-import StrideProblem from "./StrideProblem.jsx";
-//import StrideInsights from "./StrideInsights.jsx";
-//import StrideIdeation from "./StrideIdeation.jsx";
-//import StrideTesting from "./StrideTesting.jsx";
-//import StrideResult from "./StrideResult.jsx";
-//import StrideReflection from "./StrideReflection.jsx";
+import React, { useState, useEffect } from "react";
+import { Navbar, Sidebar, Summary } from "../../components/sections";
+import { Button, Badge } from "../../components/ui";
+import StrideChallenge from "./StrideChallenge";
+import StrideImage from "../../assets/stride-render.svg";
 
 const sections = [
   { id: "overview", label: "Overview" },
   { id: "challenge", label: "The Challenge" },
-  { id: "insights", label: "Insights from Research" },
+  { id: "insights", label: "Insights" },
   { id: "ideation", label: "Ideation" },
   { id: "testing", label: "Prototyping & Testing" },
   { id: "result", label: "Result & Impact" },
@@ -27,12 +15,12 @@ const sections = [
 ];
 
 const sectionComponents = [
-  StrideProblem,
-  //StrideInsights,
-  //StrideIdeation,
-  //StrideTesting,
-  //StrideResult,
-  //StrideReflection,
+  StrideChallenge,
+  // StrideInsights,
+  // StrideIdeation,
+  // StrideTesting,
+  // StrideResult,
+  // StrideReflection,
 ];
 
 export default function Stride() {
@@ -86,43 +74,42 @@ export default function Stride() {
                   <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl">
                     Stride
                   </h1>
-                  <Summary
-                    text="Stride is a smart, boundary-detecting walking stick designed
-                    to support Parkinson’s patients experiencing Freezing of
-                    Gait (FoG)—a condition that disrupts walking and undermines
-                    independence. Motivated by real patient observations and
-                    clinical literature, our team developed a discreet,
-                    ergonomic stick that offers visual and haptic cues to help
-                    users resume movement. Over 10 weeks, we ideated,
-                    prototyped, and refined the design through rigorous testing,
-                    resulting in a functional proof-of-concept ready for further
-                    validation."
-                  ></Summary>
+                  <Summary text="Stride is a smart walking stick that aids Parkinson’s patients experiencing Freezing of Gait (FoG). Developed from patient insights and clinical research, it delivers visual and haptic cues to help users resume movement. Over 10 weeks, the team designed, prototyped, and tested a discreet, ergonomic proof of concept."></Summary>
 
                   <div className="mt-6 flex flex-wrap gap-3">
-                    <Badge label="Role" value="Sole Designer & Developer" />
+                    <Badge
+                      label="Role"
+                      value="Electronics Lead & Project Coordinator"
+                    />
                     <Badge
                       label="Tools"
-                      value="HTML, CSS, JavaScript, JSDoc, Ramda.js, Figma, Mocha"
+                      value="Arduino (C++), User-Centred Design, Iterative Prototyping, Agile-Gantt"
                     />
                     <Badge label="Timeframe" value="May – Jun 2025" />
-                    <span className="inline-flex items-center rounded-2xl bg-emerald-600/10 px-3 py-1 text-sm font-semibold text-emerald-700 ring-1 ring-emerald-600/20">
+                    <span className="inline-flex items-center rounded-2xl bg-blue-600/10 px-3 py-1 text-sm font-semibold text-blue-700 ring-1 ring-emerald-600/20">
                       Key metric: 100% core rules covered
                     </span>
                   </div>
 
-                  <Button
-                    image={MonopolyImage}
-                    text="GitHub Repo"
-                    link="https://github.com/larasm192/mini-monopoly"
-                  />
+                  <div className="flex flex-wrap gap-3">
+                    <Button
+                      image="https://img.icons8.com/windows/32/external-link.png"
+                      text="Full Portfolio"
+                      link="https://github.com/larasm192/mini-monopoly"
+                    />
+                    <Button
+                      image="https://img.icons8.com/windows/32/external-link.png"
+                      text="Full Report"
+                      link="https://github.com/larasm192/mini-monopoly"
+                    />
+                  </div>
                 </div>
               </div>
 
               {/* RIGHT SIDE — FULL-HEIGHT IMAGE */}
               <div className="lg:w-2/5">
                 <img
-                  src={MonopolyImage}
+                  src={StrideImage}
                   alt="Mini Monopoly Screenshot"
                   className="h-full w-auto object-cover object-center"
                 />

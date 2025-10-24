@@ -1,46 +1,36 @@
-import laraUrl from "/lara-1.jpg";
-import { SectionDivider } from "../../components/sections/ProjectComponents.jsx";
+import MonopolyProperties from "../../assets/monopoly-properties.png";
+import {
+  SectionDivider,
+  Paragraph,
+  ImageCard,
+  IconBox,
+} from "../../components/sections";
 
 export default function MonopolyIdeationSection() {
   const items = [
     {
-      img: laraUrl,
-      alt: "Modular Architecture",
-      title: "Modular Architecture",
-      bullets: [
-        <>
-          <code>Monopoly.js</code> defines pure, documented state-transition
-          functions.
-        </>,
-        <>UI adapter cleanly bridges logic to DOM updates.</>,
-      ],
+      img: "https://img.icons8.com/ios/100/circular-arrows--v1.png",
+      alt: "Mini Monopoly Game",
+      title: "Turn-Based State Management",
+      text: "Ensures smooth alternation between two players, handling movement, property actions, and turn transitions automatically.",
     },
     {
-      img: laraUrl,
-      alt: "Functional Patterns",
-      title: "Functional Patterns",
-      bullets: [
-        <>
-          Leveraged <code>R.find</code>, <code>R.toPairs</code>,{" "}
-          <code>R.modulo</code> for movement &amp; win detection.
-        </>,
-        <>Kept logic declarative and side-effect free whenever possible.</>,
-      ],
+      img: "https://img.icons8.com/ios/50/us-dollar-circled--v1.png",
+      alt: "Mini Monopoly Game",
+      title: "Property Ownership & Rent Payments",
+      text: "Allows players to purchase properties, charge rent when others land on them, and earn double rent when owning a complete colour set.",
     },
     {
-      img: laraUrl,
-      alt: "Responsive & Accessible UI",
-      title: "Responsive & Accessible UI",
-      bullets: [
-        <>
-          CSS variables and <code>vmin</code> units keep the board perfectly
-          square.
-        </>,
-        <>
-          Custom popups with delays, keyboard support, and ARIA labels for full
-          accessibility.
-        </>,
-      ],
+      img: "https://img.icons8.com/ios/100/fast-forward.png",
+      alt: "Mini Monopoly Game",
+      title: "Passing GO & Jail Mechanics",
+      text: "Implements Monopoly’s event tiles — collecting £200 when passing GO, visiting jail, or being sent there with multi-turn escape logic and optional fines.",
+    },
+    {
+      img: "https://img.icons8.com/ios/100/trophy--v1.png",
+      alt: "Mini Monopoly Game",
+      title: "Winning Conditions",
+      text: "The game dynamically detects when a player’s money drops to zero or below, automatically declaring the other player as the winner and ending the session.",
     },
   ];
 
@@ -48,34 +38,20 @@ export default function MonopolyIdeationSection() {
     <section id="ideation" className="px-8 py-12 md:px-24">
       <SectionDivider label="Ideation & Implementation" />
       <div className="mx-auto max-w-6xl">
-        <div className="space-y-8">
-          {items.map((item, i) => (
-            <div
-              key={i}
-              className="rounded-3xl bg-white p-6 shadow-sm ring-1 ring-neutral-200 transition hover:shadow-md"
-            >
-              <div className="flex flex-col items-center gap-6 md:flex-row">
-                <img
-                  src={item.img}
-                  alt={item.alt}
-                  className="h-16 w-16 rounded-md object-cover"
-                />
-                <div>
-                  <h3 className="mb-2 text-xl font-semibold">{item.title}</h3>
-                  <ul className="list-inside list-disc space-y-1 text-sm text-neutral-700">
-                    {item.bullets.map((b, idx) => (
-                      <li key={idx}>{b}</li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-        <p className="mt-8 text-base text-neutral-700">
-          Final choice: Modular + functional approach for maintainability,
-          paired with responsive, accessible UI for consistent user experience.
-        </p>
+        <Paragraph
+          text="Motivated by a desire to deepen my JavaScript fundamentals and create a personal spin on a childhood favourite, I designed a two-player Mini Monopoly where every property was named after my friends (and cats!).
+I developed the project with a modular architecture separating game logic (Monopoly.js) from UI (main.js) and asynchronous pop-up handling (popup.js)."
+        />
+        <ImageCard
+          src={MonopolyProperties}
+          alt="Monopoly properties named after friends"
+          caption="Monopoly properties named after friends"
+        />
+        <Paragraph>
+          <strong>Core logic included:</strong>
+        </Paragraph>
+        <IconBox items={items} columns={2} />
+        <Paragraph text="Final Design Decision: Modular and functional architecture for maintainability, paired with a responsive and accessible UI to ensure a consistent and enjoyable user experience." />
       </div>
     </section>
   );

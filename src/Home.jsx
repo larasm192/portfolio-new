@@ -1,20 +1,19 @@
-import Navbar from "./components/Navbar.jsx";
+import Navbar from "./components/sections/Navbar.jsx";
 import { motion as Motion } from "framer-motion";
-import arrow2Url from "/arrow-2.svg";
-import arrowUrl from "/arrow.svg";
-import arrow3Url from "/arrow-3.svg";
-import arrow4Url from "/arrow-4.svg";
-import lara1Url from "/lara-1.jpg";
+import arrow2Url from "./assets/arrow-2.svg";
+import arrowUrl from "./assets/arrow.svg";
+import arrow3Url from "./assets/arrow-3.svg";
+import arrow4Url from "./assets/arrow-4.svg";
+import lara1Url from "./assets/lara-1.jpg";
 import ProjectCard from "./components/ProjectCard.jsx";
 import ProjectCardv2 from "./components/ProjectCard-v2.jsx";
 import ProjectCardv3 from "./components/ProjectCard-v3.jsx";
-import monopolyUrl from "/mini-monopoly.jpg";
-import strideUrl from "/stride.svg";
-import reseatUrl from "/reseat.svg";
+import monopolyUrl from "./assets/monopoly-render.png";
+import strideUrl from "./assets/stride.svg";
+import reseatUrl from "./assets/reseat.svg";
 import MusicCard from "./components/MusicCard.jsx";
-import firstlovethingsUrl from "/first-love-things.jpg";
-import Music from "./Music.jsx";
-import linkedinUrl from "/linkedin.png";
+import firstlovethingsUrl from "./assets/first-love-things.jpg";
+import linkedinUrl from "./assets/linkedin.png";
 
 export default function Home() {
   return (
@@ -32,16 +31,15 @@ export default function Home() {
           >
             {/* Slogan on the left */}
             <div className="flex-[0.7]">
-              <h1 className="mb-4 text-8xl font-bold">
-                Where{" "}
+              <h1 className="mb-4 text-8xl leading-25 font-bold">
+                Hello there, <br></br>I'm{" "}
                 <span className="bg-gradient-to-r from-orange-300 to-orange-500 bg-clip-text text-transparent">
-                  design
+                  Lara!
                 </span>{" "}
-                meets logic
               </h1>
-              <p className="group relative w-fit text-lg text-gray-600">
+              <p className="group relative mt-16 w-fit text-lg text-gray-600">
                 <img
-                  src={arrow2Url || "/public/arrow-2.svg"}
+                  src={arrow2Url}
                   alt="me"
                   className="absolute -right-10 -bottom-25 w-40 opacity-0 transition-all duration-500 group-hover:-translate-y-1 group-hover:rotate-[5deg] group-hover:opacity-100"
                 />
@@ -50,6 +48,7 @@ export default function Home() {
                   className="bg-gradient-to-r from-orange-300 to-orange-500 bg-clip-text text-transparent opacity-0 transition-all duration-300 group-hover:opacity-100"
                   target="_blank"
                   rel="noopener noreferrer"
+                  href="https://lnk.bio/eklsm"
                 >
                   & Singer-Songwriter!
                 </a>
@@ -59,13 +58,13 @@ export default function Home() {
             <div className="group relative flex flex-[0.3] justify-end">
               {/* Arrow (hidden until hover) */}
               <img
-                src={arrowUrl || "/public/arrow.svg"}
+                src={arrowUrl}
                 alt="me"
                 className="absolute -top-35 -right-15 w-40 opacity-0 transition-all duration-500 group-hover:-translate-y-1 group-hover:rotate-[5deg] group-hover:opacity-100"
               />
 
               <img
-                src={lara1Url || "/public/lara-1.jpg"}
+                src={lara1Url}
                 alt="Lara Merican"
                 className="h-64 w-64 rounded-4xl object-cover shadow-lg transition-shadow duration-300 hover:scale-101 hover:shadow-2xl hover:shadow-orange-500"
               />
@@ -115,7 +114,7 @@ export default function Home() {
             <div className="group relative flex size-fit flex-[0.3] justify-end">
               {/* Arrow (hidden until hover) */}
               <img
-                src={arrow3Url || "/public/arrow-3.svg"}
+                src={arrow3Url}
                 alt="me"
                 className="absolute -right-50 -bottom-0 w-80 opacity-0 transition-all duration-500 group-hover:-translate-y-1 group-hover:rotate-[5deg] group-hover:opacity-100"
               />
@@ -143,7 +142,7 @@ export default function Home() {
             <div className="group relative flex flex-[0.3] justify-end">
               {/* Arrow (hidden until hover) */}
               <img
-                src={arrow4Url || "/public/arrow-4.svg"}
+                src={arrow4Url}
                 alt="me"
                 className="absolute -right-60 -bottom-5 w-50 opacity-0 transition-all duration-500 group-hover:-translate-y-1 group-hover:rotate-[5deg] group-hover:opacity-100"
               />
@@ -172,8 +171,9 @@ export default function Home() {
               </h1>
               <a
                 className="mt-8 flex size-fit items-center justify-between rounded-4xl border-2 border-purple-500 bg-transparent pt-3 pr-5 pb-3 pl-5 text-base text-purple-500 hover:bg-purple-500 hover:text-white"
-                href="/music"
+                href="https://lnk.bio/eklsm"
                 rel="noopener noreferrer"
+                target="_blank"
               >
                 See More Music
               </a>

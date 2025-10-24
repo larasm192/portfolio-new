@@ -1,12 +1,6 @@
-import Navbar from "./Navbar";
-import Sidebar from "./Sidebar";
+import { Navbar } from "../components/sections";
+import { Sidebar } from "../components/sections";
 import { useState, useEffect } from "react";
-
-import ProblemSection from "./sections/ProblemSection";
-import InsightsSection from "./sections/InsightsSection";
-import IdeationSection from "./sections/IdeationSection";
-import TestingSection from "./sections/TestingSection";
-import ConclusionSection from "./sections/ConclusionSection";
 
 export default function ProjectPage({
   title,

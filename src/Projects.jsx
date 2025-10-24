@@ -1,25 +1,23 @@
-import Navbar from "./components/Navbar.jsx";
+import Navbar from "./components/sections/Navbar.jsx";
 import { motion as Motion, AnimatePresence } from "framer-motion";
 import ProjectCardv2 from "./components/ProjectCard-v2.jsx";
-import monopolyUrl from "/monopoly-render.png";
-import strideUrl from "/stride.svg";
-import reseatUrl from "/reseat.svg";
-import lara1Url from "/lara-1.jpg";
+import monopolyUrl from "./assets/monopoly-render.png";
+import strideUrl from "./assets/stride.svg";
+import reseatUrl from "./assets/reseat.svg";
+import lara1Url from "./assets/lara-1.jpg";
 import { useState } from "react";
-import vehicle2Url from "/vehicle2.svg";
-import dfpUrl from "/dfp.svg";
-import vehicleUrl from "/vehicle.svg";
-import watertightUrl from "/watertight.svg";
-import materialiseUrl from "/materialise.svg";
-import bouncerUrl from "/bouncer.svg";
-import revengUrl from "/reveng.svg";
-import ifeUrl from "/ife.svg";
-import pcsUrl from "/pcs.svg";
-import revolveUrl from "/revolve.svg";
-import electricarUrl from "/electricar.svg";
-import dancingsegUrl from "/dancingseg.svg";
-import flexicookUrl from "/flexicook.svg";
-import hnmUrl from "/h&m.svg";
+import vehicle2Url from "./assets/vehicle2.svg";
+import dfpUrl from "./assets/dfp.svg";
+import vehicleUrl from "./assets/vehicle.svg";
+import watertightUrl from "./assets/watertight.svg";
+import materialiseUrl from "./assets/materialise.svg";
+import revengUrl from "./assets/reveng.svg";
+import ifeUrl from "./assets/ife.svg";
+import pcsUrl from "./assets/pcs.svg";
+import revolveUrl from "./assets/revolve.svg";
+import electricarUrl from "./assets/electricar.svg";
+import dancingsegUrl from "./assets/dancingseg.svg";
+import flexicookUrl from "./assets/flexicook.svg";
 
 const allProjects = [
   {
@@ -53,7 +51,7 @@ const allProjects = [
     title: "Vehicle Design Portfolio 2",
     description:
       "Optimised the aerodynamics of a vehicle using thermofluid simulations to improve performance.",
-    link: "/vehicle2",
+    link: "/unfinishedproject",
     image: vehicle2Url,
     skills: ["Fusion 360", "Thermofluids", "CFD"],
     tags: ["engineering"],
@@ -71,7 +69,7 @@ const allProjects = [
     title: "Devices for Parkinson’s",
     description:
       "Designed assistive mobility devices to improve safety and independence for Parkinson’s patients.",
-    link: "/dfp",
+    link: "/unfinishedproject",
     image: dfpUrl,
     skills: ["User-Centred Design", "Fusion 360", "User Research"],
     tags: ["product-design", "electronics"],
@@ -80,7 +78,7 @@ const allProjects = [
     title: "Vehicle Design Portfolio",
     description:
       "Designed and analysed vehicle components to optimise structural performance and cooling efficiency.",
-    link: "/vehicle",
+    link: "/unfinishedproject",
     image: vehicleUrl,
     skills: ["Fusion 360", "SolidWorks", "Thermofluids"],
     tags: ["engineering"],
@@ -89,7 +87,7 @@ const allProjects = [
     title: "RESEAT",
     description:
       "Rethinking economy class seats through a lens of sustainability, comfort, and smarter material use.",
-    link: "/reseat",
+    link: "/unfinishedproject",
     image: reseatUrl,
     skills: ["Sustainability", "Fusion", "Product Teardown"],
     tags: ["product-design", "sustainability"],
@@ -148,7 +146,7 @@ const allProjects = [
     skills: ["CAD", "Product Teardown", "Manufacturing Analysis"],
     tags: ["engineering"],
   },
-  {
+  /*{
     title: "Bouncer Challenge",
     description:
       "Designed and simulated a device to launch a ping pong ball to a target using solid mechanics principles.",
@@ -165,7 +163,7 @@ const allProjects = [
     image: hnmUrl,
     skills: ["Sustainability", "Critical Thinking", "Research"],
     tags: ["sustainability"],
-  },
+  },*/
   {
     title: "Materialise",
     description:
@@ -206,7 +204,6 @@ export default function Projects() {
   return (
     <>
       <Navbar />
-
       <main className="pt-16">
         <section className="flex">
           <Motion.div
@@ -251,7 +248,7 @@ export default function Projects() {
               <AnimatePresence mode="wait">
                 {filteredProjects.map((project) => (
                   <Motion.div
-                    key={`${project.title}-${activeFilter}`} // Use a unique key
+                    key={`${project.title}-${activeFilter}`}
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.7 }}
@@ -270,8 +267,7 @@ export default function Projects() {
 
             <a
               className="mt-5 mb-5 flex size-fit items-center justify-between rounded-4xl border-2 border-orange-500 bg-white pt-3 pr-5 pb-3 pl-5 text-base text-orange-500 hover:bg-orange-500 hover:text-white"
-              href="/#"
-              rel="noopener noreferrer"
+              href="/"
             >
               Back to Home
             </a>

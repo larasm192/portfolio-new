@@ -1,20 +1,15 @@
-import Navbar from "../../components/Navbar";
-import Sidebar from "../../components/Sidebar";
-import { useState, useEffect } from "react";
-import {
-  Badge,
-  MiniStat,
-  Summary,
-  Button,
-} from "../../components/sections/ProjectComponents.jsx";
-
-import MonopolyProblem from "./MonopolyProblem.jsx";
-import MonopolyIdeation from "./MonopolyIdeation.jsx";
-import MonopolyTesting from "./MonopolyTesting.jsx";
-import MonopolyResult from "./MonopolyResult.jsx";
-import MonopolyReflection from "./MonopolyReflection.jsx";
-import MonopolyImage from "/monopoly-render.png";
-import { a } from "framer-motion/client";
+import React, { useState, useEffect } from "react";
+import { Navbar } from "../../components/sections";
+import { Sidebar } from "../../components/sections";
+import MonopolyProblem from "./MonopolyProblem";
+import MonopolyIdeation from "./MonopolyIdeation";
+import MonopolyTesting from "./MonopolyTesting";
+import MonopolyResult from "./MonopolyResult";
+import MonopolyReflection from "./MonopolyReflection";
+import { Summary } from "../../components/sections";
+import { Button } from "../../components/ui";
+import MonopolyImage from "../../assets/monopoly-render.png";
+import { Badge } from "../../components/ui";
 
 const sections = [
   { id: "overview", label: "Overview" },
@@ -105,7 +100,7 @@ export default function Monopoly() {
                   </div>
 
                   <Button
-                    image={MonopolyImage}
+                    image="https://img.icons8.com/windows/32/external-link.png"
                     text="GitHub Repo"
                     link="https://github.com/larasm192/mini-monopoly"
                   />
