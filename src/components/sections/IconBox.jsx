@@ -9,7 +9,7 @@ export default function IconBox({ items, columns = 3 }) {
   }[columns];
 
   return (
-    <div className={`grid gap-8 ${gridCols}`}>
+    <div className={`mt-4 grid gap-8 ${gridCols}`}>
       {items.map((item, i) => (
         <div
           key={i}

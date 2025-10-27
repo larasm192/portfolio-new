@@ -65,6 +65,7 @@ const allProjects = [
     skills: ["Python", "Audio Analysis", "Embedded Systems"],
     tags: ["electronics"],
   },
+  /*
   {
     title: "Devices for Parkinson’s",
     description:
@@ -74,6 +75,7 @@ const allProjects = [
     skills: ["User-Centred Design", "Fusion 360", "User Research"],
     tags: ["product-design", "electronics"],
   },
+  */
   {
     title: "Vehicle Design Portfolio",
     description:
@@ -173,6 +175,7 @@ const allProjects = [
     skills: ["Materials", "Manufacturing", "Design for Environment"],
     tags: ["engineering"],
   },
+  /*
   {
     title: "Watertight",
     description:
@@ -182,6 +185,7 @@ const allProjects = [
     skills: ["Design Thinking", "Human-Centred Design", "Prototyping"],
     tags: ["product-design"],
   },
+  */
 ];
 
 const categories = [

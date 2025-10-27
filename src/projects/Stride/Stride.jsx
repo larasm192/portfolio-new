@@ -3,24 +3,29 @@ import { Navbar, Sidebar, Summary } from "../../components/sections";
 import { Button, Badge } from "../../components/ui";
 import StrideChallenge from "./StrideChallenge";
 import StrideImage from "../../assets/stride-render.svg";
+import StrideInsights from "./StrideInsights";
+import StrideIdeation from "./StrideIdeation";
+import StrideTesting from "./StrideTesting";
+import StrideResult from "./StrideResult";
+import StrideReflection from "./StrideReflection";
 
 const sections = [
   { id: "overview", label: "Overview" },
   { id: "challenge", label: "The Challenge" },
-  { id: "insights", label: "Insights" },
+  { id: "insights", label: "Insights from Research" },
   { id: "ideation", label: "Ideation" },
   { id: "testing", label: "Prototyping & Testing" },
-  { id: "result", label: "Result & Impact" },
+  { id: "result", label: "Final Design" },
   { id: "reflection", label: "Reflection" },
 ];
 
 const sectionComponents = [
   StrideChallenge,
-  // StrideInsights,
-  // StrideIdeation,
-  // StrideTesting,
-  // StrideResult,
-  // StrideReflection,
+  StrideInsights,
+  StrideIdeation,
+  StrideTesting,
+  StrideResult,
+  StrideReflection,
 ];
 
 export default function Stride() {
@@ -86,21 +91,18 @@ export default function Stride() {
                       value="Arduino (C++), User-Centred Design, Iterative Prototyping, Agile-Gantt"
                     />
                     <Badge label="Timeframe" value="May – Jun 2025" />
-                    <span className="inline-flex items-center rounded-2xl bg-blue-600/10 px-3 py-1 text-sm font-semibold text-blue-700 ring-1 ring-emerald-600/20">
-                      Key metric: 100% core rules covered
-                    </span>
                   </div>
 
                   <div className="flex flex-wrap gap-3">
                     <Button
                       image="https://img.icons8.com/windows/32/external-link.png"
                       text="Full Portfolio"
-                      link="https://github.com/larasm192/mini-monopoly"
+                      link="/stride-portfolio.pdf"
                     />
                     <Button
                       image="https://img.icons8.com/windows/32/external-link.png"
                       text="Full Report"
-                      link="https://github.com/larasm192/mini-monopoly"
+                      link="/stride-report.pdf"
                     />
                   </div>
                 </div>

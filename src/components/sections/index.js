@@ -6,3 +6,10 @@ export { default as IssueResolutionBox } from "./IssueResolutionBox";
 export { default as ImageCard } from "./ImageCard";
 export { default as Navbar } from "./Navbar";
 export { default as Sidebar } from "./Sidebar";
+export { default as Quote } from "./Quote";
+export { PersonaCard, PersonasGrid } from "./Persona";
+export {
+  default as PrototypingBlock,
+  IterationGallery,
+  FeatureList,
+} from "./Prototyping";
