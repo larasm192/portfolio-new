@@ -71,7 +71,7 @@ export default function Home() {
               />
 
               <img
-                src={lara2Url}
+                src={lara1Url}
                 alt="Lara Merican"
                 className="aspect-square w-80 rounded-4xl object-cover object-bottom shadow-lg transition-shadow duration-300 hover:scale-101 hover:shadow-2xl hover:shadow-orange-500"
               />
