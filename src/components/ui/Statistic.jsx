@@ -1,10 +1,8 @@
-import React from "react";
-
 export default function Statistic({
   prefix = "",
   value = "",
   caption = "",
-  valueClass = "from-indigo-500 to-blue-600", // Tailwind gradient stop classes
+  valueClass = "from-indigo-500 to-blue-600",
   className = "mt-8",
 }) {
   return (
@@ -12,11 +10,15 @@ export default function Statistic({
       {prefix && (
         <div className="text-sm text-neutral-500 italic">{prefix}</div>
       )}
+
       <div
-        className={`bg-gradient-to-r bg-clip-text text-6xl font-semibold text-transparent ${valueClass}`}
+        className={`bg-gradient-to-r bg-clip-text text-transparent ${valueClass}`}
       >
-        {value}
+        <span className="inline-block pb-1 text-6xl leading-[1.1] font-semibold">
+          {value}
+        </span>
       </div>
+
       {caption && <div className="text-base text-neutral-700">{caption}</div>}
     </div>
   );
