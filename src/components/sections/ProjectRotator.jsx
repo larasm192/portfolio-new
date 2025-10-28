@@ -11,7 +11,7 @@ import { motion as Motion, AnimatePresence } from "framer-motion";
 export default function ProjectRotator({
   items = [],
   CardComponent,
-  intervalMs = 2000,
+  intervalMs = 1500,
   className = "",
 }) {
   const [index, setIndex] = React.useState(0);

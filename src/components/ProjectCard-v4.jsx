@@ -19,7 +19,7 @@ export default function ProjectCardv4({
       <img
         src={image}
         alt={imageAlt || title}
-        className="h-full w-full object-contain"
+        className="h-full w-full object-cover object-center"
       />
 
       {/* Subtle gradient at bottom (always on) */}
@@ -36,9 +36,9 @@ export default function ProjectCardv4({
         className="absolute inset-0 flex flex-col justify-end bg-black/55 opacity-0 transition-opacity duration-300 group-hover:opacity-100 group-focus:opacity-100"
       >
         <div className="p-4 md:p-5">
-          <h3 className="text-xl font-semibold text-white">{title}</h3>
+          <h3 className="text-3xl font-semibold text-white">{title}</h3>
           {description && (
-            <p className="mt-1 line-clamp-2 text-sm text-neutral-200">
+            <p className="mt-1 line-clamp-2 text-base text-neutral-200">
               {description}
             </p>
           )}

@@ -16,6 +16,10 @@ import MusicCard from "./components/MusicCard.jsx";
 import firstlovethingsUrl from "./assets/first-love-things.jpg";
 import linkedinUrl from "./assets/linkedin.png";
 import ProjectRotator from "./components/sections/ProjectRotator.jsx";
+import StrideTitle from "./assets/stride-title.svg";
+import ReseatTitle from "./assets/reseat-title.svg";
+import MonopolyTitle from "./assets/monopoly-title.svg";
+import Monopoly from "./projects/Monopoly/Monopoly.jsx";
 
 export default function Home() {
   return (
@@ -91,7 +95,7 @@ export default function Home() {
                   description:
                     "A fully interactive Monopoly game, personalised with custom properties named after my friends.",
                   link: "/monopoly",
-                  image: monopolyUrl,
+                  image: MonopolyTitle,
                   skills: ["HTML", "CSS", "JavaScript"],
                 },
                 {
@@ -99,7 +103,7 @@ export default function Home() {
                   description:
                     "A boundary-detection walking stick, designed to promote confidence and independence in Parkinson's patients.",
                   link: "/stride",
-                  image: strideUrl,
+                  image: StrideTitle,
                   skills: [
                     "Arduino (C++)",
                     "User-Centred Design",
@@ -111,7 +115,7 @@ export default function Home() {
                   description:
                     "Rethinking economy class seats through a lens of sustainability, comfort, and smarter material use.",
                   link: "/reseat",
-                  image: reseatUrl,
+                  image: ReseatTitle,
                   skills: ["Sustainability", "Fusion", "Product Teardown"],
                 },
               ]}

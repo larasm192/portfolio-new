@@ -123,7 +123,7 @@ export default function About() {
               <Statistic
                 prefix="Award"
                 value="Dean’s List"
-                caption="Academic excellence"
+                caption="23-24 Academic excellence"
                 valueClass="from-emerald-400 to-emerald-700"
               />
               <Statistic
