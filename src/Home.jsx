@@ -5,7 +5,7 @@ import arrowUrl from "./assets/arrow.svg";
 import arrow3Url from "./assets/arrow-3.svg";
 import arrow4Url from "./assets/arrow-4.svg";
 import lara1Url from "./assets/lara-1.jpg";
-import lara2Url from "./assets/lara-2.jpg";
+import lara2Url from "./assets/lara-3.jpg";
 import ProjectCard from "./components/ProjectCard.jsx";
 import ProjectCardv2 from "./components/ProjectCard-v2.jsx";
 import ProjectCardv3 from "./components/ProjectCard-v3.jsx";
