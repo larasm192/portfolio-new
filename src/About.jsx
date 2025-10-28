@@ -4,6 +4,11 @@ import { SectionDivider, Paragraph, Quote } from "./components/sections"; // adj
 import Statistic from "./components/ui/Statistic";
 import MusicCard from "./components/MusicCard.jsx";
 import Navbar from "./components/sections/Navbar.jsx";
+import eklsm from "./assets/about-eklsm.JPG";
+import kpop from "./assets/about-kpop.JPG";
+import cats from "./assets/about-cats.jpg";
+import travel from "./assets/about-travel.JPG";
+import portrait from "./assets/about-portrait.jpg";
 
 // Assets (swap to your own)
 import lara1Url from "./assets/lara-1.jpg";
@@ -147,9 +152,9 @@ export default function About() {
             {/* Portrait */}
             <div className="group relative flex flex-[0.35] justify-end">
               <img
-                src={lara1Url}
+                src={portrait}
                 alt="Lara Merican"
-                className="h-72 w-72 rounded-3xl object-cover shadow-lg transition-transform duration-300 hover:scale-[1.01] hover:shadow-2xl hover:shadow-orange-500"
+                className="h-72 w-72 rounded-3xl object-cover object-top shadow-lg transition-transform duration-300 hover:scale-[1.01] hover:shadow-2xl hover:shadow-orange-500"
               />
             </div>
           </Motion.div>
@@ -193,6 +198,7 @@ export default function About() {
                 "Storytelling",
                 "Wireframing",
                 "Figma",
+                "Adobe CC (Photoshop, Illustrator)",
                 "Accessibility",
               ]}
             />
@@ -201,7 +207,7 @@ export default function About() {
               items={[
                 "Fusion 360",
                 "3D Printing",
-                "Arduino / ESP32",
+                "Arduino / ESP32 (C++)",
                 "Sensors & Haptics",
                 "Rapid Prototyping",
                 "DFM Basics",
@@ -210,7 +216,10 @@ export default function About() {
             <SkillPills
               title="Web & Software"
               items={[
-                "HTML/CSS/JS",
+                "HTML/CSS",
+                "Python",
+                "Javascript",
+                "Pandas",
                 "React + Vite",
                 "Tailwind CSS",
                 "JSDoc",
@@ -221,8 +230,10 @@ export default function About() {
               title="Other"
               items={[
                 "Project Leadership",
-                "Public Speaking",
-                "Music Production (EKLSM)",
+                "ClickUp",
+                "Google Workspace",
+                "Microsoft Office",
+                "Music Production",
               ]}
             />
           </div>
@@ -357,24 +368,24 @@ export default function About() {
           title="Beyond Engineering"
           items={[
             {
-              src: "/images/eklsm-studio.jpg",
+              src: eklsm,
               caption: "Recording as EKLSM",
               tags: ["Music", "Production"],
             },
             {
-              src: "/images/kpop-stage.jpg",
-              caption: "K-Pop Showcase",
+              src: kpop,
+              caption: "K-Pop Competitions",
               tags: ["Dance"],
             },
             {
-              src: "/images/hike.jpg",
-              caption: "Weekend hike",
-              tags: ["Outdoors"],
+              src: travel,
+              caption: "Travelling",
+              tags: ["Travel"],
             },
             {
-              src: "/images/sketches.jpg",
-              caption: "Sketching ideas",
-              tags: ["ID"],
+              src: cats,
+              caption: "My cats :)",
+              tags: ["Pets"],
             },
           ]}
         />
