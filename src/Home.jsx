@@ -8,12 +8,14 @@ import lara1Url from "./assets/lara-1.jpg";
 import ProjectCard from "./components/ProjectCard.jsx";
 import ProjectCardv2 from "./components/ProjectCard-v2.jsx";
 import ProjectCardv3 from "./components/ProjectCard-v3.jsx";
+import ProjectCardv4 from "./components/ProjectCard-v4.jsx";
 import monopolyUrl from "./assets/monopoly-render.png";
 import strideUrl from "./assets/stride.svg";
 import reseatUrl from "./assets/reseat.svg";
 import MusicCard from "./components/MusicCard.jsx";
 import firstlovethingsUrl from "./assets/first-love-things.jpg";
 import linkedinUrl from "./assets/linkedin.png";
+import ProjectRotator from "./components/sections/ProjectRotator.jsx";
 
 export default function Home() {
   return (
@@ -80,36 +82,40 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
           >
-            <div className="mx-auto mt-3 mr-3 mb-3 ml-3 grid border-collapse grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-2">
-              <ProjectCardv2
-                title="Mini Monopoly"
-                description="A fully interactive Monopoly game, personalised with custom properties named after my friends."
-                link="/monopoly"
-                image={monopolyUrl}
-                skills={["HTML", "CSS", "JavaScript"]}
-              />
-              <ProjectCardv2
-                title="Stride."
-                description="A boundary-detection walking stick, designed to promote confidence and independence in Parkinson's patients."
-                link="/stride"
-                image={strideUrl}
-                skills={["Arduino (C++)", "User-Centred Design", "Prototyping"]}
-              />
-              <ProjectCardv2
-                title="RESEAT"
-                description="Rethinking economy class seats through a lens of sustainability, comfort, and smarter material use."
-                link="/reseat"
-                image={reseatUrl}
-                skills={["Sustainability", "Fusion", "Product Teardown"]}
-              />
-              <ProjectCardv2
-                title="Portfolio v3"
-                description="My personal portfolio website (this one!), showcasing my projects and skills."
-                link="/portfolio-v3"
-                image={monopolyUrl}
-                skills={["React", "Vite", "Tailwind CSS"]}
-              />
-            </div>
+            <ProjectRotator
+              CardComponent={ProjectCardv4}
+              intervalMs={5000}
+              items={[
+                {
+                  title: "Mini Monopoly",
+                  description:
+                    "A fully interactive Monopoly game, personalised with custom properties named after my friends.",
+                  link: "/monopoly",
+                  image: monopolyUrl,
+                  skills: ["HTML", "CSS", "JavaScript"],
+                },
+                {
+                  title: "Stride.",
+                  description:
+                    "A boundary-detection walking stick, designed to promote confidence and independence in Parkinson's patients.",
+                  link: "/stride",
+                  image: strideUrl,
+                  skills: [
+                    "Arduino (C++)",
+                    "User-Centred Design",
+                    "Prototyping",
+                  ],
+                },
+                {
+                  title: "RESEAT",
+                  description:
+                    "Rethinking economy class seats through a lens of sustainability, comfort, and smarter material use.",
+                  link: "/reseat",
+                  image: reseatUrl,
+                  skills: ["Sustainability", "Fusion", "Product Teardown"],
+                },
+              ]}
+            />
 
             <div className="group relative flex size-fit flex-[0.3] justify-end">
               {/* Arrow (hidden until hover) */}

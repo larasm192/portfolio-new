@@ -3,11 +3,24 @@ import { createRoot } from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./index.css";
 import Home from "./Home.jsx";
+import About from "./About.jsx";
 import Projects from "./Projects.jsx";
 import Monopoly from "./projects/Monopoly/Monopoly.jsx";
 import Stride from "./projects/Stride/Stride.jsx";
+import Vehicle_1 from "./projects/Vehicle 1/Vehicle_1.jsx";
 import Unfinished from "./Unfinished.jsx";
 import ErrorBoundary from "./components/ErrorBoundary.jsx";
+import Vehicle_2 from "./projects/Vehicle 2/Vehicle_2.jsx";
+import Dancing_Segway from "./projects/Dancing Segway/Dancing_Segway.jsx";
+import RESEAT from "./projects/RESEAT/RESEAT.jsx";
+import REVOLVE from "./projects/REVOLVE/REVOLVE.jsx";
+import IFE from "./projects/IFE/IFE.jsx";
+import FlexiCook from "./projects/FlexiCook/FlexiCook.jsx";
+import PCS from "./projects/PCS/PCS.jsx";
+import Electronics_Car from "./projects/Electronics Car/Electronics_Car.jsx";
+import REVENG from "./projects/REVENG/REVENG.jsx";
+import Materialise from "./projects/Materialise/Materialise.jsx";
+import Portfolio from "./projects/Portfolio/Portfolio.jsx";
 
 // Add console log for debugging
 const DebugMonopoly = () => {
@@ -21,10 +34,29 @@ createRoot(document.getElementById("root")).render(
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/about-me" element={<About />} />
           <Route path="/projects" element={<Projects />} />
-          <Route path="/monopoly" element={<DebugMonopoly />} />
+          <Route path="/mini-monopoly" element={<DebugMonopoly />} />
           <Route path="/stride" element={<Stride />} />
           <Route path="/unfinishedproject" element={<Unfinished />} />
+          <Route
+            path="/conceptual-vehicle-design-and-analysis"
+            element={<Vehicle_1 />}
+          />
+          <Route
+            path="/aerodynamic-and-thermal-systems-optimisation"
+            element={<Vehicle_2 />}
+          />
+          <Route path="/dancing-segway" element={<Dancing_Segway />} />
+          <Route path="/reseat" element={<RESEAT />} />
+          <Route path="/revolve" element={<REVOLVE />} />
+          <Route path="/improving-food-experiences" element={<IFE />} />
+          <Route path="/flexicook" element={<FlexiCook />} />
+          <Route path="/plane-crash-survivability" element={<PCS />} />
+          <Route path="/electronics-car" element={<Electronics_Car />} />
+          <Route path="/reveng" element={<REVENG />} />
+          <Route path="/materialise" element={<Materialise />} />
+          <Route path="/portfolio-v3" element={<Portfolio />} />
         </Routes>
       </BrowserRouter>
     </ErrorBoundary>

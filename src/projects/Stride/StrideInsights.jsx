@@ -10,6 +10,9 @@ import StrideUrl from "../../assets/stride.svg";
 import StrideFOG from "../../assets/stride-fog.jpg";
 import StrideUsers from "../../assets/stride-users.svg";
 import StrideUXMap from "../../assets/stride-uxmap.svg";
+import Benjamin from "../../assets/stride-benjamin.svg";
+import Edith from "../../assets/stride-edith.svg";
+import Patricia from "../../assets/stride-patricia.svg";
 
 export default function StrideInsight() {
   return (
@@ -65,7 +68,7 @@ export default function StrideInsight() {
               age: 61,
               stage: "Early stage",
               yearsSinceDx: 3,
-              avatar: "/images/benjamin.jpg",
+              avatar: Benjamin,
               bio: "Recently diagnosed pianist and granddad-to-be; worries about future independence after tremors interrupted his playing.",
               needs: "ways to keep up hobbies and daily routines.",
               because: "he wants quality time with family and to stay active.",
@@ -77,7 +80,7 @@ export default function StrideInsight() {
               age: 74,
               stage: "Severe stage",
               yearsSinceDx: 12,
-              avatar: "/images/edith.jpg",
+              avatar: Edith,
               bio: "Care-home resident who loves cooking/knitting; experiences FoG episodes and memory lapses affecting independence.",
               needs: "safe independence for day-to-day tasks.",
               because: "she feels overly reliant on carers and family.",
@@ -89,7 +92,7 @@ export default function StrideInsight() {
               age: 62,
               stage: "Caregiver (spouse)",
               yearsSinceDx: 7,
-              avatar: "/images/patricia.jpg",
+              avatar: Patricia,
               bio: "Supports husband with moderate PD; wants him to stay socially engaged without highlighting the condition.",
               needs: "discreet support to keep him involved socially.",
               because: "she values his confidence and participation.",

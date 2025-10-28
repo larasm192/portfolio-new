@@ -88,7 +88,6 @@ export default function Monopoly() {
                   ></Summary>
 
                   <div className="mt-6 flex flex-wrap gap-3">
-                    <Badge label="Role" value="Sole Designer & Developer" />
                     <Badge
                       label="Tools"
                       value="HTML, CSS, JavaScript, JSDoc, Ramda.js, Figma, Mocha"
