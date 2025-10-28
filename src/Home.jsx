@@ -5,6 +5,7 @@ import arrowUrl from "./assets/arrow.svg";
 import arrow3Url from "./assets/arrow-3.svg";
 import arrow4Url from "./assets/arrow-4.svg";
 import lara1Url from "./assets/lara-1.jpg";
+import lara2Url from "./assets/lara-2.jpg";
 import ProjectCard from "./components/ProjectCard.jsx";
 import ProjectCardv2 from "./components/ProjectCard-v2.jsx";
 import ProjectCardv3 from "./components/ProjectCard-v3.jsx";
@@ -70,9 +71,9 @@ export default function Home() {
               />
 
               <img
-                src={lara1Url}
+                src={lara2Url}
                 alt="Lara Merican"
-                className="h-64 w-64 rounded-4xl object-cover shadow-lg transition-shadow duration-300 hover:scale-101 hover:shadow-2xl hover:shadow-orange-500"
+                className="aspect-[2/3] w-64 rounded-4xl object-cover shadow-lg transition-shadow duration-300 hover:scale-101 hover:shadow-2xl hover:shadow-orange-500"
               />
             </div>
           </Motion.div>
