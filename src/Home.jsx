@@ -73,7 +73,7 @@ export default function Home() {
               <img
                 src={lara2Url}
                 alt="Lara Merican"
-                className="aspect-[2/3] w-64 rounded-4xl object-cover shadow-lg transition-shadow duration-300 hover:scale-101 hover:shadow-2xl hover:shadow-orange-500"
+                className="aspect-square w-80 rounded-4xl object-cover object-bottom shadow-lg transition-shadow duration-300 hover:scale-101 hover:shadow-2xl hover:shadow-orange-500"
               />
             </div>
           </Motion.div>
@@ -95,7 +95,7 @@ export default function Home() {
                   title: "Mini Monopoly",
                   description:
                     "A fully interactive Monopoly game, personalised with custom properties named after my friends.",
-                  link: "/monopoly",
+                  link: "/mini-monopoly",
                   image: MonopolyTitle,
                   skills: ["HTML", "CSS", "JavaScript"],
                 },

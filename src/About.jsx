@@ -125,10 +125,10 @@ export default function About() {
               </h1>
               <Paragraph>
                 I’m an <strong>MEng Design Engineering</strong> student at{" "}
-                <strong>Imperial College London</strong> (Dean’s List), blending
-                human-centred design with prototyping, electronics, and clean
-                UI. I love building things that help people and telling stories
-                through tests, data, and design.
+                <strong>Imperial College London</strong>, blending human-centred
+                design with prototyping, electronics, and clean UI. I love
+                building things that help people and telling stories through
+                tests, data, and design.
               </Paragraph>
 
               <div className="mt-6 flex flex-wrap gap-3">
