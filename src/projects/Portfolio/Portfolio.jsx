@@ -3,7 +3,7 @@ import { Navbar, Sidebar, Summary } from "../../components/sections";
 import { Button, Badge } from "../../components/ui";
 import StrideImage from "../../assets/stride-render.svg";
 import vehicleUrl from "../../assets/vehicle2-render.svg";
-import render from "../../assets/materialise.svg";
+import render from "../../assets/portfolio-render.png";
 
 const sections = [
   { id: "overview", label: "Overview" },
@@ -91,7 +91,13 @@ export default function Portfolio() {
               </div>
 
               {/* RIGHT SIDE — FULL-HEIGHT IMAGE */}
-              <div className="lg:w-2/5">{/*no image rn*/}</div>
+              <div className="lg:w-2/5">
+                <img
+                  src={render}
+                  alt="Mini Monopoly Screenshot"
+                  className="h-full w-auto object-cover object-center"
+                />
+              </div>
             </div>
           </section>
 

@@ -107,7 +107,7 @@ export default function About() {
       <Navbar />
       <main className="pt-16">
         {/* Hero */}
-        <section className="flex min-h-[calc(100vh-4rem)] items-center justify-center bg-white text-gray-800">
+        <section className="relative flex min-h-[calc(100vh-4rem)] items-center justify-center bg-white text-gray-800">
           <Motion.div
             className="flex w-full max-w-6xl items-center justify-between px-8"
             initial={{ opacity: 0, y: 40 }}
@@ -157,6 +157,34 @@ export default function About() {
                 className="h-72 w-72 rounded-3xl object-cover object-top shadow-lg transition-transform duration-300 hover:scale-[1.01] hover:shadow-2xl hover:shadow-orange-500"
               />
             </div>
+          </Motion.div>
+          {/* Scroll Arrow */}
+          <Motion.div
+            className="absolute bottom-8 left-1/2 -translate-x-1/2 cursor-pointer"
+            initial={{ opacity: 0, y: 0 }}
+            animate={{ opacity: [0.2, 1, 0.2], y: [0, 8, 0] }}
+            transition={{ duration: 1.5, repeat: Infinity }}
+            onClick={() => {
+              window.scrollTo({
+                top: window.innerHeight,
+                behavior: "smooth",
+              });
+            }}
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={2}
+              stroke="currentColor"
+              className="h-8 w-8 text-orange-400"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M19 9l-7 7-7-7"
+              />
+            </svg>
           </Motion.div>
         </section>
 

@@ -18,6 +18,7 @@ import revolveUrl from "./assets/revolve.svg";
 import electricarUrl from "./assets/electricar.svg";
 import dancingsegUrl from "./assets/dancingseg.svg";
 import flexicookUrl from "./assets/flexicook.svg";
+import portfolioUrl from "./assets/portfolio-render.png";
 
 const allProjects = [
   {
@@ -81,7 +82,7 @@ const allProjects = [
     description:
       "My personal portfolio website (this one!), showcasing my projects and skills.",
     link: "/portfolio-v3",
-    image: monopolyUrl,
+    image: portfolioUrl,
     skills: ["React", "Vite", "Tailwind CSS"],
     tags: ["software"],
   },
