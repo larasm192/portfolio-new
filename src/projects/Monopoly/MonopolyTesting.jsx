@@ -7,6 +7,7 @@ import {
 import MonopolyPopup from "../../assets/monopoly-popup.svg";
 import MonopolyMoney from "../../assets/monopoly-money.png";
 import MonopolyAccessibility from "../../assets/monopoly-accessibility.jpg";
+import MonopolyNoEnd from "../../assets/monopoly-noend.png";
 
 export default function MonopolyTestingSection() {
   return (
@@ -33,7 +34,7 @@ export default function MonopolyTestingSection() {
               "Designed a modular popup component with yes/no buttons and integrated it into gameplay.",
           },
           {
-            img: MonopolyMoney,
+            img: MonopolyNoEnd,
             alt: "Money balancing",
             issueTitle: "Issue #2",
             issueText:
