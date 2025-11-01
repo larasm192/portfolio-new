@@ -19,7 +19,7 @@ const sectionComponents = [
   //StrideReflection,
 ];
 
-export default function Vehicle_2() {
+export default function RESEAT() {
   const [activeSection, setActiveSection] = useState("overview");
   const [scrollProgress, setScrollProgress] = useState(0);
 
@@ -84,7 +84,7 @@ export default function Vehicle_2() {
                     <Button
                       image="https://img.icons8.com/windows/32/external-link.png"
                       text="Full Portfolio"
-                      link="/vehicle2-portfolio.pdf"
+                      link="/reseat-portfolio.pdf"
                     />
                   </div>
                 </div>
