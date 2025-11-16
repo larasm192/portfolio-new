@@ -38,7 +38,7 @@ export default function Home() {
           >
             {/* Slogan on the left */}
             <div className="flex-[0.7]">
-              <h1 className="mb-4 text-4xl leading-tight font-bold sm:text-5xl md:text-6xl lg:text-8xl">
+              <h1 className="mb-4 text-4xl leading-tight font-bold sm:text-5xl text-center md:text-left md:text-6xl lg:text-8xl">
                 Hello there, <br />
                 I'm{" "}
                 <span className="bg-gradient-to-r from-orange-300 to-orange-500 bg-clip-text text-transparent">
@@ -54,7 +54,7 @@ export default function Home() {
                 />
                 Design Engineering Student{" "}
                 <a
-                  className="bg-gradient-to-r from-orange-300 to-orange-500 bg-clip-text text-transparent opacity-0 transition-all duration-300 group-hover:opacity-100"
+                  className="bg-gradient-to-r from-orange-300 to-orange-500 bg-clip-text text-transparent md:opacity-0 transition-all duration-300 group-hover:opacity-100"
                   target="_blank"
                   rel="noopener noreferrer"
                   href="https://lnk.bio/eklsm"
@@ -195,48 +195,56 @@ export default function Home() {
         </section>
 
         {/* Contact section */}
-        <section className="flex items-center justify-center bg-white px-4 py-8 md:min-h-50 md:px-0 md:py-0">
-          <div className="flex w-full max-w-6xl items-center justify-center gap-4 px-0 md:gap-2 md:px-8">
-            <a
-              className="aspect-square h-10 sm:h-12"
-              href="https://www.linkedin.com/in/lara-merican/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img
-                src={linkedinUrl}
-                alt="LinkedIn"
-                className="aspect-square h-full w-full rounded-xl object-cover"
-              />
-            </a>
-            <a
-              className="aspect-square h-10 sm:h-12"
-              href="mailto:mericanlara@gmail.com"
-            >
-              <img
-                width="50"
-                height="50"
-                src="https://img.icons8.com/material-rounded/50/mail.png"
-                alt="mail"
-                className="h-full w-full"
-              />
-            </a>
-            <a
-              className="aspect-square h-10 sm:h-12"
-              href="http://github.com/larasm192/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img
-                width="50"
-                height="50"
-                src="https://img.icons8.com/ios-glyphs/50/github.png"
-                alt="github"
-                className="h-full w-full"
-              />
-            </a>
-          </div>
-        </section>
+<section className="flex flex-col items-center justify-center bg-white px-4 py-8 md:min-h-50 md:px-0 md:py-0">
+  <div className="flex w-full max-w-6xl items-center justify-center gap-4 px-0 md:gap-2 md:px-8">
+    <a
+      className="aspect-square h-10 sm:h-12"
+      href="https://www.linkedin.com/in/lara-merican/"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <img
+        src={linkedinUrl}
+        alt="LinkedIn"
+        className="aspect-square h-full w-full rounded-xl object-cover"
+      />
+    </a>
+
+    <a
+      className="aspect-square h-10 sm:h-12"
+      href="mailto:mericanlara@gmail.com"
+    >
+      <img
+        width="50"
+        height="50"
+        src="https://img.icons8.com/material-rounded/50/mail.png"
+        alt="mail"
+        className="h-full w-full"
+      />
+    </a>
+
+    <a
+      className="aspect-square h-10 sm:h-12"
+      href="http://github.com/larasm192/"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <img
+        width="50"
+        height="50"
+        src="https://img.icons8.com/ios-glyphs/50/github.png"
+        alt="github"
+        className="h-full w-full"
+      />
+    </a>
+  </div>
+
+  {/* Signature line */}
+  <p className="mt-4 pb-6 text-center text-xs text-gray-500 md:text-sm">
+    Designed and coded by Lara Merican (2025)
+  </p>
+</section>
+
       </main>
     </>
   );

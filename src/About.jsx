@@ -48,7 +48,7 @@ function ExternalLinkButton({ href, label, color = "orange" }) {
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className={`rounded-4xl border-2 bg-white px-5 py-3 text-base transition-all ${colorClasses[color]}`}
+      className={`rounded-4xl border-2 bg-white px-5 py-3 text-sm md:text-base transition-all ${colorClasses[color]}`}
     >
       {label}
     </a>
@@ -58,7 +58,7 @@ function ExternalLinkButton({ href, label, color = "orange" }) {
 // components/InterestsGallery.jsx
 function InterestsGallery({ items = [], title = "Interests" }) {
   return (
-    <section className="px-8 pb-12 md:px-24">
+    <section className="px-4 pb-12 md:px-24">
       <div className="mx-auto max-w-6xl">
         <h2 className="mb-4 text-xl font-semibold">{title}</h2>
         <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4">
@@ -109,14 +109,14 @@ export default function About() {
         {/* Hero */}
         <section className="relative flex min-h-[calc(100vh-4rem)] items-center justify-center bg-white text-gray-800">
           <Motion.div
-            className="flex w-full max-w-6xl items-center justify-between px-8"
+            className="flex w-full max-w-6xl flex-col-reverse items-center gap-8 px-4 py-10 md:flex-row md:items-center md:justify-between md:px-8"
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9 }}
           >
             {/* Text */}
-            <div className="flex-[0.65]">
-              <h1 className="mb-4 text-6xl leading-[1.05] font-bold">
+            <div className="w-full flex-[0.65]">
+              <h1 className="mb-4 text-4xl font-bold leading-[1.1] sm:text-5xl md:text-6xl md:leading-[1.05]">
                 Hi, I’m{" "}
                 <span className="bg-gradient-to-r from-orange-300 to-orange-500 bg-clip-text text-transparent">
                   Lara Merican
@@ -132,7 +132,6 @@ export default function About() {
               </Paragraph>
 
               <div className="mt-6 flex flex-wrap gap-3">
-                {/* If you host a CV in /public */}
                 <ExternalLinkButton
                   href="/LaraMerican_CV.pdf"
                   label="Download CV"
@@ -149,18 +148,20 @@ export default function About() {
                 />
               </div>
             </div>
+
             {/* Portrait */}
-            <div className="group relative flex flex-[0.35] justify-end">
+            <div className="group relative flex w-full flex-[0.35] justify-center md:justify-end">
               <img
                 src={portrait}
                 alt="Lara Merican"
-                className="h-72 w-72 rounded-3xl object-cover object-top shadow-lg transition-transform duration-300 hover:scale-[1.01] hover:shadow-2xl hover:shadow-orange-500"
+                className="h-56 w-56 rounded-3xl object-cover object-top shadow-lg transition-transform duration-300 hover:scale-[1.01] hover:shadow-2xl hover:shadow-orange-500 sm:h-64 sm:w-64 md:h-72 md:w-72"
               />
             </div>
           </Motion.div>
+
           {/* Scroll Arrow */}
           <Motion.div
-            className="absolute bottom-8 left-1/2 -translate-x-1/2 cursor-pointer"
+            className="absolute bottom-6 left-1/2 -translate-x-1/2 cursor-pointer"
             initial={{ opacity: 0, y: 0 }}
             animate={{ opacity: [0.2, 1, 0.2], y: [0, 8, 0] }}
             transition={{ duration: 1.5, repeat: Infinity }}
@@ -189,10 +190,10 @@ export default function About() {
         </section>
 
         {/* Quick stats */}
-        <section className="px-8 py-12 md:px-24">
+        <section className="px-4 py-12 md:px-24">
           <div className="mx-auto max-w-6xl">
             <SectionDivider label="At a Glance" />
-            <div className="mt-2 flex flex-wrap justify-center gap-x-16">
+            <div className="mt-4 flex flex-wrap justify-center gap-x-10 gap-y-6 md:gap-x-16">
               <Statistic
                 prefix="Degree"
                 value="MEng"
@@ -216,7 +217,7 @@ export default function About() {
         </section>
 
         {/* Skills */}
-        <section className="px-8 pb-12 md:px-24">
+        <section className="px-4 pb-12 md:px-24">
           <div className="mx-auto grid max-w-6xl grid-cols-1 gap-4 md:grid-cols-2">
             <SkillPills
               title="Design & UX"
@@ -268,7 +269,7 @@ export default function About() {
         </section>
 
         {/* Experience & Leadership */}
-        <section className="px-8 pb-12 md:px-24">
+        <section className="px-4 pb-12 md:px-24">
           <div className="mx-auto max-w-6xl">
             <SectionDivider label="Experience & Leadership" />
             <div className="mt-4 grid grid-cols-1 gap-4 md:grid-cols-2">
@@ -316,7 +317,7 @@ export default function About() {
         </section>
 
         {/* Education & Interests */}
-        <section className="px-8 pb-12 md:px-24">
+        <section className="px-4 pb-12 md:px-24">
           <div className="mx-auto max-w-6xl">
             <SectionDivider label="Education" />
 
@@ -420,7 +421,7 @@ export default function About() {
 
         {/* Contact */}
         <section className="flex items-center justify-center bg-white pb-16">
-          <div className="flex w-full max-w-6xl flex-col items-center gap-4 px-8">
+          <div className="flex w-full max-w-6xl flex-col items-center gap-4 px-4 md:px-8">
             <SectionDivider label="Let’s Connect" />
             <Paragraph>
               I’m open to internships in London or Malaysia across product
@@ -428,7 +429,7 @@ export default function About() {
               to chat.
             </Paragraph>
 
-            <div className="mt-2 flex items-center gap-3">
+            <div className="mt-2 flex flex-wrap items-center justify-center gap-3">
               <a
                 className="aspect-square h-10"
                 href="https://www.linkedin.com/in/lara-merican/"

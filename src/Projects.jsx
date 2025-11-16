@@ -66,17 +66,6 @@ const allProjects = [
     skills: ["Python", "Audio Analysis", "Embedded Systems"],
     tags: ["electronics"],
   },
-  /*
-  {
-    title: "Devices for Parkinson’s",
-    description:
-      "Designed assistive mobility devices to improve safety and independence for Parkinson’s patients.",
-    link: "/unfinishedproject",
-    image: dfpUrl,
-    skills: ["User-Centred Design", "Fusion 360", "User Research"],
-    tags: ["product-design", "electronics"],
-  },
-  */
   {
     title: "Portfolio v3",
     description:
@@ -149,24 +138,6 @@ const allProjects = [
     skills: ["CAD", "Product Teardown", "Manufacturing Analysis"],
     tags: ["engineering"],
   },
-  /*{
-    title: "Bouncer Challenge",
-    description:
-      "Designed and simulated a device to launch a ping pong ball to a target using solid mechanics principles.",
-    link: "/unfinishedproject",
-    image: bouncerUrl,
-    skills: ["Solid Mechanics", "MATLAB", "Simulation"],
-    tags: ["engineering"],
-  },
-  {
-    title: "H&M Net Zero Critique",
-    description:
-      "Analysed and critiqued H&M’s approach to achieving net zero carbon emissions.",
-    link: "/unfinishedproject",
-    image: hnmUrl,
-    skills: ["Sustainability", "Critical Thinking", "Research"],
-    tags: ["sustainability"],
-  },*/
   {
     title: "Materialise",
     description:
@@ -176,17 +147,6 @@ const allProjects = [
     skills: ["Materials", "Manufacturing", "Design for Environment"],
     tags: ["engineering"],
   },
-  /*
-  {
-    title: "Watertight",
-    description:
-      "Designed a solution to help users identify water usage habits and reduce waste.",
-    link: "/unfinishedproject",
-    image: watertightUrl,
-    skills: ["Design Thinking", "Human-Centred Design", "Prototyping"],
-    tags: ["product-design"],
-  },
-  */
 ];
 
 const categories = [
@@ -198,44 +158,89 @@ const categories = [
   "sustainability",
 ];
 
+const formatCategoryLabel = (cat) => cat.replace("-", " ").toUpperCase();
+
 export default function Projects() {
   const [activeFilter, setActiveFilter] = useState("all");
+  const [isFilterOpen, setIsFilterOpen] = useState(false);
 
   const filteredProjects =
     activeFilter === "all"
       ? allProjects
       : allProjects.filter((project) => project.tags.includes(activeFilter));
 
+  const handleFilterClick = (cat) => {
+    setActiveFilter(cat);
+    // close dropdown on mobile after choosing
+    setIsFilterOpen(false);
+  };
+
   return (
     <>
       <Navbar />
       <main className="pt-16">
+        {/* Header + Filter */}
         <section className="flex">
           <Motion.div
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
+            className="w-full"
           >
-            {/* Title */}
-            <div className="flex h-full w-screen items-center justify-between pt-10 pr-20 pb-10 pl-20">
-              <h1 className="min-h-16 bg-gradient-to-r from-orange-300 to-orange-500 bg-clip-text text-6xl font-bold text-transparent">
+            <div className="mx-auto flex w-full max-w-7xl flex-col gap-4 pt-10 pb-6 px-6 md:flex-row md:items-center md:justify-between md:px-20 md:pb-10">
+              {/* Title */}
+              <h1 className="min-h-16 bg-gradient-to-r from-orange-300 to-orange-500 bg-clip-text text-4xl font-bold text-transparent sm:text-5xl md:text-6xl">
                 Projects
               </h1>
 
-              <div className="flex size-fit gap-2">
+              {/* Desktop filters */}
+              <div className="hidden md:flex size-fit gap-2">
                 {categories.map((cat) => (
                   <button
                     key={cat}
-                    onClick={() => setActiveFilter(cat)}
+                    onClick={() => handleFilterClick(cat)}
                     className={`flex size-fit items-center justify-between rounded-3xl pt-2 pr-5 pb-2 pl-5 text-xs ${
                       activeFilter === cat
                         ? "bg-orange-500 text-white outline-2 outline-orange-500"
                         : "bg-white text-orange-500 outline-2 outline-orange-500 hover:bg-orange-500 hover:text-white"
                     }`}
                   >
-                    {cat.replace("-", " ").toUpperCase()}
+                    {formatCategoryLabel(cat)}
                   </button>
                 ))}
+              </div>
+
+              {/* Mobile filter: toggle button + dropdown */}
+              <div className="md:hidden w-full">
+                <button
+                  onClick={() => setIsFilterOpen((prev) => !prev)}
+                  className="flex w-full items-center justify-between rounded-3xl border border-orange-500 bg-white px-4 py-2 text-xs font-medium text-orange-500"
+                >
+                  <span>
+                    Filter: {formatCategoryLabel(activeFilter)}
+                  </span>
+                  <span className="text-lg">
+                    {isFilterOpen ? "−" : "+"}
+                  </span>
+                </button>
+
+                {isFilterOpen && (
+                  <div className="mt-2 flex flex-wrap gap-2">
+                    {categories.map((cat) => (
+                      <button
+                        key={cat}
+                        onClick={() => handleFilterClick(cat)}
+                        className={`rounded-3xl px-4 py-2 text-xs ${
+                          activeFilter === cat
+                            ? "bg-orange-500 text-white outline-2 outline-orange-500"
+                            : "bg-white text-orange-500 outline-2 outline-orange-500 hover:bg-orange-500 hover:text-white"
+                        }`}
+                      >
+                        {formatCategoryLabel(cat)}
+                      </button>
+                    ))}
+                  </div>
+                )}
               </div>
             </div>
           </Motion.div>
@@ -249,7 +254,7 @@ export default function Projects() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
           >
-            <div className="mx-auto mt-3 mr-3 mb-3 ml-3 grid border-collapse grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-2">
+            <div className="mx-auto mt-3 mb-3 grid border-collapse grid-cols-1 gap-3 px-3 sm:grid-cols-2 lg:grid-cols-2">
               <AnimatePresence mode="wait">
                 {filteredProjects.map((project) => (
                   <Motion.div

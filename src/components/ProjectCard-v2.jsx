@@ -7,38 +7,60 @@ export default function ProjectCardv2({
 }) {
   return (
     <a
-      className="flex items-center rounded-xl bg-white shadow-lg transition-transform duration-300 hover:scale-101 hover:shadow-2xl hover:shadow-orange-300"
+      className="
+        flex flex-col overflow-hidden rounded-xl bg-white shadow-lg transition-transform
+        duration-300 hover:scale-101 hover:shadow-2xl hover:shadow-orange-300
+        md:flex-row
+      "
       href={link}
       rel="noopener noreferrer"
     >
-      <div className="aspect-auto h-110 flex-[0.35] flex-col p-8">
-        <div className="flex h-full w-full flex-col justify-between">
-          <div className="text-left">
-            <h3 className="mb-3 text-3xl font-semibold">{title}</h3>
-            <p className="text-base font-light">{description}</p>
-            <div className="mb-2 flex gap-2"></div>
-          </div>
-          <div className="flex flex-wrap gap-2">
-            <div className="flex size-fit items-center justify-between rounded-3xl bg-orange-500 pt-2 pr-5 pb-2 pl-5 text-xs text-white">
-              {skills[0]}
-            </div>
-            <div className="flex size-fit items-center justify-between rounded-3xl bg-orange-500 pt-2 pr-5 pb-2 pl-5 text-xs text-white">
-              {skills[1]}
-            </div>
-            <div className="flex size-fit items-center justify-between rounded-3xl bg-orange-500 pt-2 pr-5 pb-2 pl-5 text-xs text-white">
-              {skills[2]}
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="flex h-full w-full flex-[0.65] items-center justify-between p-2">
+      {/* Image (mobile top, desktop right) */}
+      <div className="w-full md:flex-[0.65] md:order-2">
         {image && (
           <img
             src={image}
             alt={title}
-            className="h-full w-full rounded-xl object-cover"
+            className="
+              h-48 w-full object-cover md:h-full md:rounded-r-xl
+            "
           />
         )}
+      </div>
+
+      {/* Text content (mobile bottom, desktop left) */}
+      <div
+        className="
+          flex w-full flex-[0.35] flex-col justify-between gap-4 p-6
+          md:p-8 md:order-1
+        "
+      >
+        {/* Title + description */}
+        <div className="text-left">
+          <h3 className="mb-3 text-2xl font-semibold md:text-3xl">
+            {title}
+          </h3>
+          <p className="text-sm font-light md:text-base">
+            {description}
+          </p>
+        </div>
+
+        {/* Skill tags */}
+        <div className="flex flex-wrap gap-2">
+          {skills.slice(0, 3).map(
+            (skill, i) =>
+              skill && (
+                <div
+                  key={i}
+                  className="
+                    rounded-3xl bg-orange-500 px-5 py-2 text-xs text-white
+                  "
+                >
+                  {skill}
+                </div>
+              )
+          )}
+        </div>
       </div>
     </a>
   );
