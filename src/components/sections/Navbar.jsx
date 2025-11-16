@@ -5,15 +5,11 @@ export default function Navbar() {
 
   return (
     <nav className="fixed top-0 left-0 z-50 w-full border-b border-gray-200 bg-white/80 backdrop-blur-md">
-      <div className="mx-auto max-w-7xl px-6 md:px-40">
+      <div className="mx-auto max-w-7xl px-6 md:px-24">
         <div className="flex h-16 items-center justify-between">
-          
           {/* Logo */}
-          <a
-            className="text-xl font-semibold tracking-tight text-gray-800"
-            href="/"
-          >
-            Lara Merican
+          <a href="/" className="w-16">
+            <img src="/lara-logo.svg" />
           </a>
 
           {/* Desktop Nav */}
@@ -28,30 +24,36 @@ export default function Navbar() {
 
           {/* Mobile Hamburger */}
           <button
-            className="md:hidden flex items-center justify-center p-2 text-gray-700 hover:text-black"
+            className="flex items-center justify-center p-2 text-gray-700 hover:text-black md:hidden"
             onClick={() => setOpen(!open)}
             aria-label="Toggle menu"
           >
             <div className="space-y-1.5">
-              <span className={`block h-0.5 w-6 bg-gray-700 transition ${open ? "rotate-45 translate-y-1.5" : ""}`}></span>
-              <span className={`block h-0.5 w-6 bg-gray-700 transition ${open ? "opacity-0" : ""}`}></span>
-              <span className={`block h-0.5 w-6 bg-gray-700 transition ${open ? "-rotate-45 -translate-y-1.5" : ""}`}></span>
+              <span
+                className={`block h-0.5 w-6 bg-gray-700 transition ${open ? "translate-y-1.5 rotate-45" : ""}`}
+              ></span>
+              <span
+                className={`block h-0.5 w-6 bg-gray-700 transition ${open ? "opacity-0" : ""}`}
+              ></span>
+              <span
+                className={`block h-0.5 w-6 bg-gray-700 transition ${open ? "-translate-y-1.5 -rotate-45" : ""}`}
+              ></span>
             </div>
           </button>
         </div>
 
         {/* Mobile Menu */}
         {open && (
-          <div className="md:hidden pb-4 pt-2 space-y-2 text-gray-700 text-sm">
+          <div className="space-y-2 pt-2 pb-4 text-sm text-gray-700 md:hidden">
             <a
               href="/projects"
-              className="block px-2 py-2 rounded hover:bg-gray-100"
+              className="block rounded px-2 py-2 hover:bg-gray-100"
             >
               Projects
             </a>
             <a
               href="/about-me"
-              className="block px-2 py-2 rounded hover:bg-gray-100"
+              className="block rounded px-2 py-2 hover:bg-gray-100"
             >
               About Me
             </a>
