@@ -187,14 +187,14 @@ export default function Projects() {
             transition={{ duration: 1 }}
             className="w-full"
           >
-            <div className="mx-auto flex w-full max-w-7xl flex-col gap-4 pt-10 pb-6 px-6 md:flex-row md:items-center md:justify-between md:px-20 md:pb-10">
+            <div className="mx-24 flex w-full max-w-7xl flex-col gap-4 px-6 pt-10 pb-6 md:flex-row md:items-center md:justify-between md:px-20 md:pb-10">
               {/* Title */}
               <h1 className="min-h-16 bg-gradient-to-r from-orange-300 to-orange-500 bg-clip-text text-4xl font-bold text-transparent sm:text-5xl md:text-6xl">
                 Projects
               </h1>
 
               {/* Desktop filters */}
-              <div className="hidden md:flex size-fit gap-2">
+              <div className="hidden size-fit gap-2 md:flex">
                 {categories.map((cat) => (
                   <button
                     key={cat}
@@ -211,17 +211,13 @@ export default function Projects() {
               </div>
 
               {/* Mobile filter: toggle button + dropdown */}
-              <div className="md:hidden w-full">
+              <div className="w-full md:hidden">
                 <button
                   onClick={() => setIsFilterOpen((prev) => !prev)}
                   className="flex w-full items-center justify-between rounded-3xl border border-orange-500 bg-white px-4 py-2 text-xs font-medium text-orange-500"
                 >
-                  <span>
-                    Filter: {formatCategoryLabel(activeFilter)}
-                  </span>
-                  <span className="text-lg">
-                    {isFilterOpen ? "−" : "+"}
-                  </span>
+                  <span>Filter: {formatCategoryLabel(activeFilter)}</span>
+                  <span className="text-lg">{isFilterOpen ? "−" : "+"}</span>
                 </button>
 
                 {isFilterOpen && (
