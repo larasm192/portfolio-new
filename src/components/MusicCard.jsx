@@ -1,7 +1,7 @@
 export default function MusicCard({ title, artist, image, link, date }) {
   return (
     <a
-      className="hover:shadow-2x flex-col rounded-xl bg-white shadow-lg transition-transform duration-300 hover:scale-101 hover:shadow-orange-500"
+      className="hover:shadow-2x flex flex-col rounded-xl bg-white shadow-lg transition-transform duration-300 hover:scale-101 hover:shadow-orange-500"
       href={link}
       rel="noopener noreferrer"
       target="_blank"

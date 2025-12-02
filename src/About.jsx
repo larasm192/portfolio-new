@@ -48,7 +48,7 @@ function ExternalLinkButton({ href, label, color = "orange" }) {
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className={`rounded-4xl border-2 bg-white px-5 py-3 text-sm md:text-base transition-all ${colorClasses[color]}`}
+      className={`rounded-4xl border-2 bg-white px-5 py-3 text-sm transition-all md:text-base ${colorClasses[color]}`}
     >
       {label}
     </a>
@@ -116,9 +116,9 @@ export default function About() {
           >
             {/* Text */}
             <div className="w-full flex-[0.65]">
-              <h1 className="mb-4 text-4xl font-bold leading-[1.1] sm:text-5xl md:text-6xl md:leading-[1.05]">
+              <h1 className="mb-4 text-4xl leading-[1.1] font-bold sm:text-5xl md:text-6xl md:leading-[1.05]">
                 Hi, I’m{" "}
-                <span className="bg-gradient-to-r from-orange-300 to-orange-500 bg-clip-text text-transparent">
+                <span className="bg-linear-to-r from-orange-300 to-orange-500 bg-clip-text text-transparent">
                   Lara Merican
                 </span>
                 .
@@ -138,6 +138,8 @@ export default function About() {
                 />
                 <ExternalLinkButton
                   href="mailto:mericanlara@gmail.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   label="Email Me"
                   color="blue"
                 />

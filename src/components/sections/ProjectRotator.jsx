@@ -37,7 +37,7 @@ export default function ProjectRotator({
       onMouseLeave={() => setPaused(false)}
     >
       {/* The viewport */}
-      <div className="relative mx-auto w-full overflow-hidden rounded-3xl bg-white ring-1 ring-neutral-200">
+      <div className="relative mx-auto w-full overflow-hidden rounded-3xl">
         <AnimatePresence initial={false} mode="popLayout">
           <Motion.div
             key={safeIndex}
@@ -45,45 +45,45 @@ export default function ProjectRotator({
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: -40 }}
             transition={{ duration: 0.45 }}
-            className="p-3 sm:p-4"
+            className="w-full"
           >
             <CardComponent {...items[safeIndex]} />
           </Motion.div>
         </AnimatePresence>
 
         {/* Controls */}
-        <div className="pointer-events-none absolute inset-0 flex items-center justify-between px-2">
+        <div className="pointer-events-none absolute inset-0 flex items-center justify-between px-4">
           <button
             aria-label="Previous project"
             onClick={() => go(-1)}
-            className="pointer-events-auto rounded-full bg-white/80 p-2 shadow ring-1 ring-neutral-200 backdrop-blur hover:bg-white"
+            className="pointer-events-auto flex h-8 w-8 items-center justify-center rounded-full bg-white/50 shadow ring-1 ring-neutral-200 backdrop-blur hover:bg-white"
           >
-            ◀
+            ←
           </button>
           <button
             aria-label="Next project"
             onClick={() => go(1)}
-            className="pointer-events-auto rounded-full bg-white/80 p-2 shadow ring-1 ring-neutral-200 backdrop-blur hover:bg-white"
+            className="pointer-events-auto flex h-8 w-8 items-center justify-center rounded-full bg-white/50 shadow ring-1 ring-neutral-200 backdrop-blur hover:bg-white"
           >
-            ▶
+            →
           </button>
         </div>
+      </div>
 
-        {/* Dots */}
-        <div className="absolute right-0 bottom-1 left-0 mt-8 flex justify-center gap-2">
-          {items.map((_, i) => (
-            <button
-              key={i}
-              onClick={() => setIndex(i)}
-              className={`h-2 w-2 rounded-full transition ${
-                i === safeIndex
-                  ? "bg-orange-500"
-                  : "bg-neutral-300 hover:bg-neutral-400"
-              }`}
-              aria-label={`Go to project ${i + 1}`}
-            />
-          ))}
-        </div>
+      {/* Dots */}
+      <div className="mt-8 flex justify-center gap-2">
+        {items.map((_, i) => (
+          <button
+            key={i}
+            onClick={() => setIndex(i)}
+            className={`h-2 w-2 rounded-full transition ${
+              i === safeIndex
+                ? "bg-white"
+                : "bg-neutral-500 hover:bg-orange-500"
+            }`}
+            aria-label={`Go to project ${i + 1}`}
+          />
+        ))}
       </div>
     </section>
   );

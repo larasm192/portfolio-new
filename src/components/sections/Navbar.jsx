@@ -4,7 +4,7 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 z-50 w-full border-b border-gray-200 bg-white/80 backdrop-blur-md">
+    <nav className="fixed top-0 left-0 z-50 w-full border-b border-gray-100 backdrop-blur-md">
       <div className="mx-auto max-w-7xl px-6 md:px-24">
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}

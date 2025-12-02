@@ -178,7 +178,7 @@ export default function Projects() {
   return (
     <>
       <Navbar />
-      <main className="pt-16">
+      <main className="w-full pt-16">
         {/* Header + Filter */}
         <section className="flex">
           <Motion.div
@@ -187,14 +187,14 @@ export default function Projects() {
             transition={{ duration: 1 }}
             className="w-full"
           >
-            <div className="mx-24 flex w-full max-w-7xl flex-col gap-4 px-6 pt-10 pb-6 md:flex-row md:items-center md:justify-between md:px-20 md:pb-10">
+            <div className="mx-auto flex w-full max-w-7xl flex-col items-center justify-center gap-4 px-6 pt-10 pb-6 md:px-24 md:pb-10 lg:flex-row lg:items-center lg:justify-between">
               {/* Title */}
-              <h1 className="min-h-16 bg-gradient-to-r from-orange-300 to-orange-500 bg-clip-text text-4xl font-bold text-transparent sm:text-5xl md:text-6xl">
+              <h1 className="min-h-16 bg-linear-to-r from-orange-300 to-orange-500 bg-clip-text text-center text-4xl font-bold text-transparent sm:text-5xl md:text-6xl lg:text-left">
                 Projects
               </h1>
 
               {/* Desktop filters */}
-              <div className="hidden size-fit gap-2 md:flex">
+              <div className="hidden size-fit gap-2 lg:flex">
                 {categories.map((cat) => (
                   <button
                     key={cat}
@@ -211,7 +211,7 @@ export default function Projects() {
               </div>
 
               {/* Mobile filter: toggle button + dropdown */}
-              <div className="w-full md:hidden">
+              <div className="w-full lg:hidden">
                 <button
                   onClick={() => setIsFilterOpen((prev) => !prev)}
                   className="flex w-full items-center justify-between rounded-3xl border border-orange-500 bg-white px-4 py-2 text-xs font-medium text-orange-500"
@@ -243,14 +243,14 @@ export default function Projects() {
         </section>
 
         {/* Project section */}
-        <section className="flex min-h-auto flex-col items-center justify-center bg-gray-50">
+        <section className="flex min-h-auto flex-col items-center justify-center">
           <Motion.div
             className="flex w-full flex-col items-center"
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
           >
-            <div className="mx-auto mt-3 mb-3 grid border-collapse grid-cols-1 gap-3 px-3 sm:grid-cols-2 lg:grid-cols-2">
+            <div className="mx-auto grid max-w-360 border-collapse grid-cols-1 gap-8 px-8 sm:grid-cols-2 sm:px-12 lg:grid-cols-2">
               <AnimatePresence mode="wait">
                 {filteredProjects.map((project) => (
                   <Motion.div
@@ -272,7 +272,7 @@ export default function Projects() {
             </div>
 
             <a
-              className="mt-5 mb-5 flex size-fit items-center justify-between rounded-4xl border-2 border-orange-500 bg-white pt-3 pr-5 pb-3 pl-5 text-base text-orange-500 hover:bg-orange-500 hover:text-white"
+              className="mt-8 mb-8 flex size-fit items-center justify-between rounded-4xl border-2 border-orange-500 bg-white pt-3 pr-5 pb-3 pl-5 text-base text-orange-500 hover:bg-orange-500 hover:text-white"
               href="/"
             >
               Back to Home

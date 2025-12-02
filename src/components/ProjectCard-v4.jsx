@@ -13,7 +13,7 @@ export default function ProjectCardv4({
   return (
     <a
       href={link}
-      className={`group relative block aspect-[16/9] overflow-hidden rounded-3xl shadow-sm ring-1 ring-neutral-200 hover:shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 ${className}`}
+      className={`group relative block aspect-video overflow-hidden rounded-3xl hover:shadow-md ${className}`}
     >
       {/* Full-bleed image */}
       <img
@@ -24,7 +24,7 @@ export default function ProjectCardv4({
 
       {/* Subtle gradient at bottom (always on) */}
       <div
-        className="pointer-events-none absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-black/40 to-transparent"
+        className="pointer-events-none absolute inset-x-0 bottom-0 h-24 bg-linear-to-t from-black/40 to-transparent"
         aria-hidden="true"
       />
 
@@ -35,7 +35,7 @@ export default function ProjectCardv4({
         whileFocus={{ opacity: 1 }}
         className="absolute inset-0 flex flex-col justify-end bg-black/55 opacity-0 transition-opacity duration-300 group-hover:opacity-100 group-focus:opacity-100"
       >
-        <div className="p-4 md:p-5">
+        <div className="p-5 md:p-10">
           <h3 className="text-3xl font-semibold text-white">{title}</h3>
           {description && (
             <p className="mt-1 line-clamp-2 text-base text-neutral-200">
