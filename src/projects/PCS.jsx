@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
-import { Navbar, Sidebar, Summary } from "../../components/sections";
-import { Button, Badge } from "../../components/ui";
-import StrideImage from "../../assets/stride-render.svg";
-import vehicleUrl from "../../assets/vehicle2-render.svg";
-import render from "../../assets/portfolio-render.png";
+import { Navbar, Sidebar, Summary } from "../components/sections";
+import { Button, Badge } from "../components/ui";
+import StrideImage from "../assets/stride-render.svg";
+import vehicleUrl from "../assets/vehicle2-render.svg";
+import render from "../assets/pcs.svg";
 
 const sections = [
   { id: "overview", label: "Overview" },
@@ -19,7 +19,7 @@ const sectionComponents = [
   //StrideReflection,
 ];
 
-export default function Portfolio() {
+export default function PCS() {
   const [activeSection, setActiveSection] = useState("overview");
   const [scrollProgress, setScrollProgress] = useState(0);
 
@@ -68,23 +68,23 @@ export default function Portfolio() {
               <div className="flex items-center px-24 py-16 lg:w-3/5">
                 <div className="max-w-4xl">
                   <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl">
-                    Portfolio v3
+                    Plane Crash Survivability
                   </h1>
-                  <Summary text="Designed and developed a personal portfolio website to showcase engineering, design, and creative projects. Built with React, Vite, and Tailwind CSS, the site features responsive layouts, dynamic filtering, and a cohesive visual identity for all my projects."></Summary>
+                  <Summary text="Analysed historical aviation crash data (1918–2022) to predict survivability outcomes using machine learning. Applied Decision Trees, Logistic Regression, Support Vector Machines, and Random Forest models in Python to evaluate how flight phase, crash cause, aircraft type, and location influence survival likelihood."></Summary>
 
                   <div className="mt-6 flex flex-wrap gap-3">
                     <Badge
                       label="Tools"
-                      value="React, Tailwind CSS, Vite, Vercel, Framer Motion"
+                      value="Python, Pandas, scikit-learn, Google Colab"
                     />
-                    <Badge label="Timeframe" value="Jul 2025 – Current" />
+                    <Badge label="Timeframe" value="May – Jun 2025" />
                   </div>
 
                   <div className="flex flex-wrap gap-3">
                     <Button
                       image="https://img.icons8.com/windows/32/external-link.png"
-                      text="GitHub Repo"
-                      link="https://github.com/larasm192/portfolio-new"
+                      text="Full Report"
+                      link="/pcs-report.pdf"
                     />
                   </div>
                 </div>

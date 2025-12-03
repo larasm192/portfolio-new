@@ -14,10 +14,10 @@ export default function Navbar() {
 
           {/* Desktop Nav */}
           <div className="hidden space-x-8 text-sm text-gray-600 md:flex">
-            <a href="/projects" className="transition hover:text-black">
+            <a href="/projects" className="transition hover:text-orange-500">
               Projects
             </a>
-            <a href="/about-me" className="transition hover:text-black">
+            <a href="/about-me" className="transition hover:text-orange-500">
               About Me
             </a>
           </div>

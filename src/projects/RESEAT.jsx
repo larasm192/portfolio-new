@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
-import { Navbar, Sidebar, Summary } from "../../components/sections";
-import { Button, Badge } from "../../components/ui";
-import StrideImage from "../../assets/stride-render.svg";
-import vehicleUrl from "../../assets/vehicle2-render.svg";
-import render from "../../assets/materialise.svg";
+import { Navbar, Sidebar, Summary } from "../components/sections";
+import { Button, Badge } from "../components/ui";
+import StrideImage from "../assets/stride-render.svg";
+import vehicleUrl from "../assets/vehicle2-render.svg";
+import render from "../assets/reseat.svg";
 
 const sections = [
   { id: "overview", label: "Overview" },
@@ -19,7 +19,7 @@ const sectionComponents = [
   //StrideReflection,
 ];
 
-export default function Materialise() {
+export default function RESEAT() {
   const [activeSection, setActiveSection] = useState("overview");
   const [scrollProgress, setScrollProgress] = useState(0);
 
@@ -68,23 +68,23 @@ export default function Materialise() {
               <div className="flex items-center px-24 py-16 lg:w-3/5">
                 <div className="max-w-4xl">
                   <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl">
-                    Materialise
+                    RESEAT
                   </h1>
-                  <Summary text="Determined the optimal sustainable material for an eco-friendly bike frame based on a client's brief. Conducted background research, mechanical analysis, and material selection using Ashby plots and Semantic Differential Scales, aligning performance and affordability with the client’s environmental values."></Summary>
+                  <Summary text="Conducted a product teardown of an economy aircraft seat to uncover opportunities for sustainable redesign. Insights from material analysis and structural evaluation informed a series of conceptual seat designs prioritising recyclability, weight reduction, and modular repairability."></Summary>
 
                   <div className="mt-6 flex flex-wrap gap-3">
                     <Badge
                       label="Tools"
-                      value="Ansys Granta Edupack, Ashby Plots, Market Research"
+                      value="Fusion 360, Ansys Granta EduPack, Product Teardown Tools"
                     />
-                    <Badge label="Timeframe" value="Nov – Dec 2025" />
+                    <Badge label="Timeframe" value="Oct – Dec 2024" />
                   </div>
 
                   <div className="flex flex-wrap gap-3">
                     <Button
                       image="https://img.icons8.com/windows/32/external-link.png"
-                      text="Full Report"
-                      link="/materialise-report.pdf"
+                      text="Full Portfolio"
+                      link="/reseat-portfolio.pdf"
                     />
                   </div>
                 </div>

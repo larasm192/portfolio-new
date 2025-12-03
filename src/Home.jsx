@@ -20,9 +20,25 @@ import ProjectRotator from "./components/sections/ProjectRotator.jsx";
 import StrideTitle from "./assets/stride-title.svg";
 import ReseatTitle from "./assets/reseat-title.svg";
 import MonopolyTitle from "./assets/monopoly-title.svg";
-import Monopoly from "./projects/Monopoly/Monopoly.jsx";
+import Monopoly from "./projects/Monopoly.jsx";
+import { projects } from "./data/projects.js";
 
 export default function Home() {
+  const featuredTitles = ["Mini Monopoly", "Stride.", "RESEAT"];
+  const featuredProjects = featuredTitles
+    .map((title) => projects.find((project) => project.title === title))
+    .filter(Boolean)
+    .map((project) => {
+      const overrides = {
+        "Mini Monopoly": MonopolyTitle,
+        "Stride.": StrideTitle,
+        RESEAT: ReseatTitle,
+      };
+      return overrides[project.title]
+        ? { ...project, image: overrides[project.title] }
+        : project;
+    });
+
   return (
     <>
       <Navbar />
@@ -92,36 +108,7 @@ export default function Home() {
             <ProjectRotator
               CardComponent={ProjectCardv4}
               intervalMs={5000}
-              items={[
-                {
-                  title: "Mini Monopoly",
-                  description:
-                    "A fully interactive Monopoly game, personalised with custom properties named after my friends.",
-                  link: "/mini-monopoly",
-                  image: MonopolyTitle,
-                  skills: ["HTML", "CSS", "JavaScript"],
-                },
-                {
-                  title: "Stride.",
-                  description:
-                    "A boundary-detection walking stick, designed to promote confidence and independence in Parkinson's patients.",
-                  link: "/stride",
-                  image: StrideTitle,
-                  skills: [
-                    "Arduino (C++)",
-                    "User-Centred Design",
-                    "Prototyping",
-                  ],
-                },
-                {
-                  title: "RESEAT",
-                  description:
-                    "Rethinking economy class seats through a lens of sustainability, comfort, and smarter material use.",
-                  link: "/reseat",
-                  image: ReseatTitle,
-                  skills: ["Sustainability", "Fusion", "Product Teardown"],
-                },
-              ]}
+              items={featuredProjects}
             />
 
             <div className="group relative mt-4 flex size-fit flex-[0.3] justify-center md:mt-0 md:justify-end">

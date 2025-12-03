@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
-import { Navbar, Sidebar, Summary } from "../../components/sections";
-import { Button, Badge } from "../../components/ui";
-import StrideImage from "../../assets/stride-render.svg";
-import vehicleUrl from "../../assets/vehicle2-render.svg";
+import { Navbar, Sidebar, Summary } from "../components/sections";
+import { Button, Badge } from "../components/ui";
+import StrideImage from "../assets/stride-render.svg";
+import vehicleUrl from "../assets/vehicle2-render.svg";
+import render from "../assets/flexicook.svg";
 
 const sections = [
   { id: "overview", label: "Overview" },
@@ -18,7 +19,7 @@ const sectionComponents = [
   //StrideReflection,
 ];
 
-export default function Vehicle_2() {
+export default function FlexiCook() {
   const [activeSection, setActiveSection] = useState("overview");
   const [scrollProgress, setScrollProgress] = useState(0);
 
@@ -67,23 +68,24 @@ export default function Vehicle_2() {
               <div className="flex items-center px-24 py-16 lg:w-3/5">
                 <div className="max-w-4xl">
                   <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl">
-                    Aerodynamic and Thermal Systems Optimisation
+                    FlexiCook
                   </h1>
-                  <Summary text="Validated Computational Fluid Dynamics (CFD) results through experimental wind tunnel testing and optimised a battery cooling plate for enhanced thermal performance. The study integrates aerodynamic analysis with heat transfer optimisation, building upon prior pipeline design work."></Summary>
+                  <Summary text="Built on the Food Experience project by developing FlexiCook, a remote-controlled smart cooker designed for student athletes. Enables users to prepare nutritious meals conveniently through a connected app, combining IoT functionality with user-centred design for healthier independent living."></Summary>
 
                   <div className="mt-6 flex flex-wrap gap-3">
+                    <Badge label="Role" value="UI/UX Lead" />
                     <Badge
                       label="Tools"
-                      value="Fusion 360, Ansys, Computational Fluid Dynamics (CFD)"
+                      value="Figma, User Research, User Testing , Works-Like Prototyping"
                     />
-                    <Badge label="Timeframe" value="Feb – Mar 2025" />
+                    <Badge label="Timeframe" value="May – Jul 2024" />
                   </div>
 
                   <div className="flex flex-wrap gap-3">
                     <Button
                       image="https://img.icons8.com/windows/32/external-link.png"
                       text="Full Portfolio"
-                      link="/vehicle2-portfolio.pdf"
+                      link="/flexicook-portfolio.pdf"
                     />
                   </div>
                 </div>
@@ -92,7 +94,7 @@ export default function Vehicle_2() {
               {/* RIGHT SIDE — FULL-HEIGHT IMAGE */}
               <div className="lg:w-2/5">
                 <img
-                  src={vehicleUrl}
+                  src={render}
                   alt="Mini Monopoly Screenshot"
                   className="h-full w-auto object-cover object-center"
                 />

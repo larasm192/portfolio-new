@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
-import { Navbar, Sidebar, Summary } from "../../components/sections";
-import { Button, Badge } from "../../components/ui";
-import StrideImage from "../../assets/stride-render.svg";
-import vehicleUrl from "../../assets/vehicle.svg";
+import { Navbar, Sidebar, Summary } from "../components/sections";
+import { Button, Badge } from "../components/ui";
+import StrideImage from "../assets/stride-render.svg";
+import vehicleUrl from "../assets/vehicle2-render.svg";
+import render from "../assets/revolve.svg";
 
 const sections = [
   { id: "overview", label: "Overview" },
@@ -18,7 +19,7 @@ const sectionComponents = [
   //StrideReflection,
 ];
 
-export default function Vehicle_1() {
+export default function REVOLVE() {
   const [activeSection, setActiveSection] = useState("overview");
   const [scrollProgress, setScrollProgress] = useState(0);
 
@@ -67,23 +68,23 @@ export default function Vehicle_1() {
               <div className="flex items-center px-24 py-16 lg:w-3/5">
                 <div className="max-w-4xl">
                   <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl">
-                    Conceptual Vehicle Design and Analysis
+                    REVOLVE
                   </h1>
-                  <Summary text="Conducted Computational Fluid Dynamics (CFD) simulations to optimise the aerodynamic performance of a conceptual vehicle and design an efficient battery cooling system. Through iterative CAD modelling, meshing refinement, and pressure–velocity analysis in ANSYS Fluent, the study achieved reduced drag and improved heat transfer."></Summary>
+                  <Summary text="Transformed household waste into a kinetic sculpture powered by sensors, motors, and LEDs. The interactive installation promotes sustainability through motion and light, turning discarded materials into expressive, energy-responsive art."></Summary>
 
                   <div className="mt-6 flex flex-wrap gap-3">
                     <Badge
                       label="Tools"
-                      value="Fusion 360, Ansys, Computational Fluid Dynamics (CFD)"
+                      value="Bela (C++), Infrared Sensors, Motors, LEDs"
                     />
-                    <Badge label="Timeframe" value="Jan – Feb 2025" />
+                    <Badge label="Timeframe" value="Oct – Dec 2024" />
                   </div>
 
                   <div className="flex flex-wrap gap-3">
                     <Button
                       image="https://img.icons8.com/windows/32/external-link.png"
                       text="Full Portfolio"
-                      link="/vehicle1-portfolio.pdf"
+                      link="/revolve-portfolio.pdf"
                     />
                   </div>
                 </div>
@@ -92,7 +93,7 @@ export default function Vehicle_1() {
               {/* RIGHT SIDE — FULL-HEIGHT IMAGE */}
               <div className="lg:w-2/5">
                 <img
-                  src={vehicleUrl}
+                  src={render}
                   alt="Mini Monopoly Screenshot"
                   className="h-full w-auto object-cover object-center"
                 />

@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
-import { Navbar, Sidebar, Summary } from "../../components/sections";
-import { Button, Badge } from "../../components/ui";
-import StrideImage from "../../assets/stride-render.svg";
-import vehicleUrl from "../../assets/vehicle2-render.svg";
-import render from "../../assets/flexicook.svg";
+import { Navbar, Sidebar, Summary } from "../components/sections";
+import { Button, Badge } from "../components/ui";
+import StrideImage from "../assets/stride-render.svg";
+import vehicleUrl from "../assets/vehicle2-render.svg";
+import segway from "../assets/dancingseg.svg";
 
 const sections = [
   { id: "overview", label: "Overview" },
@@ -19,7 +19,7 @@ const sectionComponents = [
   //StrideReflection,
 ];
 
-export default function FlexiCook() {
+export default function Dancing_Segway() {
   const [activeSection, setActiveSection] = useState("overview");
   const [scrollProgress, setScrollProgress] = useState(0);
 
@@ -68,24 +68,23 @@ export default function FlexiCook() {
               <div className="flex items-center px-24 py-16 lg:w-3/5">
                 <div className="max-w-4xl">
                   <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl">
-                    FlexiCook
+                    Dancing Segway
                   </h1>
-                  <Summary text="Built on the Food Experience project by developing FlexiCook, a remote-controlled smart cooker designed for student athletes. Enables users to prepare nutritious meals conveniently through a connected app, combining IoT functionality with user-centred design for healthier independent living."></Summary>
+                  <Summary text="Developed a self-balancing two-wheeled robot capable of dancing in sync with music through real-time beat detection and PID control. Integrated sensors, microcontrollers, and signal processing algorithms to achieve stable motion and responsive choreography, demonstrating the intersection of control engineering and creative expression."></Summary>
 
                   <div className="mt-6 flex flex-wrap gap-3">
-                    <Badge label="Role" value="UI/UX Lead" />
                     <Badge
                       label="Tools"
-                      value="Figma, User Research, User Testing , Works-Like Prototyping"
+                      value="Python, Pybench Board, Audio Analysis, Embedded Systems"
                     />
-                    <Badge label="Timeframe" value="May – Jul 2024" />
+                    <Badge label="Timeframe" value="Mar 2025" />
                   </div>
 
                   <div className="flex flex-wrap gap-3">
                     <Button
                       image="https://img.icons8.com/windows/32/external-link.png"
                       text="Full Portfolio"
-                      link="/flexicook-portfolio.pdf"
+                      link="/vehicle2-portfolio.pdf"
                     />
                   </div>
                 </div>
@@ -94,7 +93,7 @@ export default function FlexiCook() {
               {/* RIGHT SIDE — FULL-HEIGHT IMAGE */}
               <div className="lg:w-2/5">
                 <img
-                  src={render}
+                  src={segway}
                   alt="Mini Monopoly Screenshot"
                   className="h-full w-auto object-cover object-center"
                 />

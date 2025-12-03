@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
-import { Navbar, Sidebar, Summary } from "../../components/sections";
-import { Button, Badge } from "../../components/ui";
-import StrideImage from "../../assets/stride-render.svg";
-import vehicleUrl from "../../assets/vehicle2-render.svg";
-import render from "../../assets/reseat.svg";
+import { Navbar, Sidebar, Summary } from "../components/sections";
+import { Button, Badge } from "../components/ui";
+import StrideImage from "../assets/stride-render.svg";
+import vehicleUrl from "../assets/vehicle2-render.svg";
+import render from "../assets/electricar.svg";
 
 const sections = [
   { id: "overview", label: "Overview" },
@@ -19,7 +19,7 @@ const sectionComponents = [
   //StrideReflection,
 ];
 
-export default function RESEAT() {
+export default function Electronics_Car() {
   const [activeSection, setActiveSection] = useState("overview");
   const [scrollProgress, setScrollProgress] = useState(0);
 
@@ -68,25 +68,16 @@ export default function RESEAT() {
               <div className="flex items-center px-24 py-16 lg:w-3/5">
                 <div className="max-w-4xl">
                   <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl">
-                    RESEAT
+                    Electronics Car
                   </h1>
-                  <Summary text="Conducted a product teardown of an economy aircraft seat to uncover opportunities for sustainable redesign. Insights from material analysis and structural evaluation informed a series of conceptual seat designs prioritising recyclability, weight reduction, and modular repairability."></Summary>
+                  <Summary text="Designed and built a Bluetooth-controlled car powered by an ESP32 microcontroller. Enabled real-time mobile control and responsive motion through integrated motor drivers and wireless communication, showcasing applied electronics and embedded systems design."></Summary>
 
                   <div className="mt-6 flex flex-wrap gap-3">
-                    <Badge
-                      label="Tools"
-                      value="Fusion 360, Ansys Granta EduPack, Product Teardown Tools"
-                    />
-                    <Badge label="Timeframe" value="Oct – Dec 2024" />
+                    <Badge label="Tools" value="ESP32, Arduino IDE, C/C++" />
+                    <Badge label="Timeframe" value="Jun 2025" />
                   </div>
 
-                  <div className="flex flex-wrap gap-3">
-                    <Button
-                      image="https://img.icons8.com/windows/32/external-link.png"
-                      text="Full Portfolio"
-                      link="/reseat-portfolio.pdf"
-                    />
-                  </div>
+                  <div className="flex flex-wrap gap-3"></div>
                 </div>
               </div>
 

@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from "react";
-import { Navbar, Sidebar, Summary } from "../../components/sections";
-import { Button, Badge } from "../../components/ui";
-import StrideImage from "../../assets/stride-render.svg";
-import vehicleUrl from "../../assets/vehicle2-render.svg";
-import render from "../../assets/ife.svg";
+import { Navbar, Sidebar, Summary } from "../components/sections";
+import { Button, Badge } from "../components/ui";
+import StrideImage from "../assets/stride-render.svg";
+import vehicleUrl from "../assets/vehicle.svg";
 
 const sections = [
   { id: "overview", label: "Overview" },
@@ -19,7 +18,7 @@ const sectionComponents = [
   //StrideReflection,
 ];
 
-export default function IFE() {
+export default function Vehicle_1() {
   const [activeSection, setActiveSection] = useState("overview");
   const [scrollProgress, setScrollProgress] = useState(0);
 
@@ -68,23 +67,23 @@ export default function IFE() {
               <div className="flex items-center px-24 py-16 lg:w-3/5">
                 <div className="max-w-4xl">
                   <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl">
-                    Improving Food Experiences
+                    Conceptual Vehicle Design and Analysis
                   </h1>
-                  <Summary text="Researched and designed solutions to improve food accessibility and nutrition for university student athletes. Combined user interviews, observations and journey mapping to develop concepts that enhance convenience and overall nutritional experience for student atheletes."></Summary>
+                  <Summary text="Conducted Computational Fluid Dynamics (CFD) simulations to optimise the aerodynamic performance of a conceptual vehicle and design an efficient battery cooling system. Through iterative CAD modelling, meshing refinement, and pressure–velocity analysis in ANSYS Fluent, the study achieved reduced drag and improved heat transfer."></Summary>
 
                   <div className="mt-6 flex flex-wrap gap-3">
                     <Badge
                       label="Tools"
-                      value="Figma, Fusion 360, Adobe Creative Suite, Lo-Fi Prototyping"
+                      value="Fusion 360, Ansys, Computational Fluid Dynamics (CFD)"
                     />
-                    <Badge label="Timeframe" value="Feb – Mar 2025" />
+                    <Badge label="Timeframe" value="Jan – Feb 2025" />
                   </div>
 
                   <div className="flex flex-wrap gap-3">
                     <Button
                       image="https://img.icons8.com/windows/32/external-link.png"
                       text="Full Portfolio"
-                      link="/ife-portfolio.pdf"
+                      link="/vehicle1-portfolio.pdf"
                     />
                   </div>
                 </div>
@@ -93,7 +92,7 @@ export default function IFE() {
               {/* RIGHT SIDE — FULL-HEIGHT IMAGE */}
               <div className="lg:w-2/5">
                 <img
-                  src={render}
+                  src={vehicleUrl}
                   alt="Mini Monopoly Screenshot"
                   className="h-full w-auto object-cover object-center"
                 />

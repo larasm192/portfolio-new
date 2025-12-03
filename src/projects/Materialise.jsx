@@ -1,34 +1,25 @@
 import React, { useState, useEffect } from "react";
-import { Navbar } from "../../components/sections";
-import { Sidebar } from "../../components/sections";
-import MonopolyProblem from "./MonopolyProblem";
-import MonopolyIdeation from "./MonopolyIdeation";
-import MonopolyTesting from "./MonopolyTesting";
-import MonopolyResult from "./MonopolyResult";
-import MonopolyReflection from "./MonopolyReflection";
-import { Summary } from "../../components/sections";
-import { Button } from "../../components/ui";
-import MonopolyImage from "../../assets/monopoly-render.png";
-import { Badge } from "../../components/ui";
+import { Navbar, Sidebar, Summary } from "../components/sections";
+import { Button, Badge } from "../components/ui";
+import StrideImage from "../assets/stride-render.svg";
+import vehicleUrl from "../assets/vehicle2-render.svg";
+import render from "../assets/materialise.svg";
 
 const sections = [
   { id: "overview", label: "Overview" },
-  { id: "brief", label: "The Brief" },
-  { id: "ideation", label: "Ideation" },
-  { id: "testing", label: "Prototyping & Testing" },
-  { id: "result", label: "Result & Impact" },
-  { id: "reflection", label: "Reflection" },
+  { id: "challenge", label: "TBC" },
 ];
 
 const sectionComponents = [
-  MonopolyProblem,
-  MonopolyIdeation,
-  MonopolyTesting,
-  MonopolyResult,
-  MonopolyReflection,
+  //StrideChallenge,
+  //StrideInsights,
+  //StrideIdeation,
+  //StrideTesting,
+  //StrideResult,
+  //StrideReflection,
 ];
 
-export default function Monopoly() {
+export default function Materialise() {
   const [activeSection, setActiveSection] = useState("overview");
   const [scrollProgress, setScrollProgress] = useState(0);
 
@@ -77,39 +68,32 @@ export default function Monopoly() {
               <div className="flex items-center px-24 py-16 lg:w-3/5">
                 <div className="max-w-4xl">
                   <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl">
-                    Mini Monopoly
+                    Materialise
                   </h1>
-                  <Summary
-                    text="Built a two-player browser-based Monopoly variant from
-                    scratch, achieving a fully responsive, accessible, and
-                    bug-free gameplay experience in under 6 weeks. Modular
-                    architecture and functional programming patterns ensure
-                    maintainability and easy extension."
-                  ></Summary>
+                  <Summary text="Determined the optimal sustainable material for an eco-friendly bike frame based on a client's brief. Conducted background research, mechanical analysis, and material selection using Ashby plots and Semantic Differential Scales, aligning performance and affordability with the client’s environmental values."></Summary>
 
                   <div className="mt-6 flex flex-wrap gap-3">
                     <Badge
                       label="Tools"
-                      value="HTML, CSS, JavaScript, JSDoc, Ramda.js, Figma, Mocha"
+                      value="Ansys Granta Edupack, Ashby Plots, Market Research"
                     />
-                    <Badge label="Timeframe" value="May – Jun 2025" />
-                    <span className="inline-flex items-center rounded-2xl bg-emerald-600/10 px-3 py-1 text-sm font-semibold text-emerald-700 ring-1 ring-emerald-600/20">
-                      Key metric: 100% core rules covered
-                    </span>
+                    <Badge label="Timeframe" value="Nov – Dec 2025" />
                   </div>
 
-                  <Button
-                    image="https://img.icons8.com/windows/32/external-link.png"
-                    text="GitHub Repo"
-                    link="https://github.com/larasm192/mini-monopoly"
-                  />
+                  <div className="flex flex-wrap gap-3">
+                    <Button
+                      image="https://img.icons8.com/windows/32/external-link.png"
+                      text="Full Report"
+                      link="/materialise-report.pdf"
+                    />
+                  </div>
                 </div>
               </div>
 
               {/* RIGHT SIDE — FULL-HEIGHT IMAGE */}
               <div className="lg:w-2/5">
                 <img
-                  src={MonopolyImage}
+                  src={render}
                   alt="Mini Monopoly Screenshot"
                   className="h-full w-auto object-cover object-center"
                 />

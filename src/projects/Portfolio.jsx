@@ -1,34 +1,25 @@
 import React, { useState, useEffect } from "react";
-import { Navbar, Sidebar, Summary } from "../../components/sections";
-import { Button, Badge } from "../../components/ui";
-import StrideChallenge from "./StrideChallenge";
-import StrideImage from "../../assets/stride-render.svg";
-import StrideInsights from "./StrideInsights";
-import StrideIdeation from "./StrideIdeation";
-import StrideTesting from "./StrideTesting";
-import StrideResult from "./StrideResult";
-import StrideReflection from "./StrideReflection";
+import { Navbar, Sidebar, Summary } from "../components/sections";
+import { Button, Badge } from "../components/ui";
+import StrideImage from "../assets/stride-render.svg";
+import vehicleUrl from "../assets/vehicle2-render.svg";
+import render from "../assets/portfolio-render.png";
 
 const sections = [
   { id: "overview", label: "Overview" },
-  { id: "challenge", label: "The Challenge" },
-  { id: "insights", label: "Insights from Research" },
-  { id: "ideation", label: "Ideation" },
-  { id: "testing", label: "Prototyping & Testing" },
-  { id: "result", label: "Final Design" },
-  { id: "reflection", label: "Reflection" },
+  { id: "challenge", label: "TBC" },
 ];
 
 const sectionComponents = [
-  StrideChallenge,
-  StrideInsights,
-  StrideIdeation,
-  StrideTesting,
-  StrideResult,
-  StrideReflection,
+  //StrideChallenge,
+  //StrideInsights,
+  //StrideIdeation,
+  //StrideTesting,
+  //StrideResult,
+  //StrideReflection,
 ];
 
-export default function Stride() {
+export default function Portfolio() {
   const [activeSection, setActiveSection] = useState("overview");
   const [scrollProgress, setScrollProgress] = useState(0);
 
@@ -77,32 +68,23 @@ export default function Stride() {
               <div className="flex items-center px-24 py-16 lg:w-3/5">
                 <div className="max-w-4xl">
                   <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl">
-                    Stride
+                    Portfolio v3
                   </h1>
-                  <Summary text="Stride is a smart walking stick that aids Parkinson’s patients experiencing Freezing of Gait (FoG). Developed from patient insights and clinical research, it delivers visual and haptic cues to help users resume movement. Over 10 weeks, the team designed, prototyped, and tested a discreet, ergonomic proof of concept."></Summary>
+                  <Summary text="Designed and developed a personal portfolio website to showcase engineering, design, and creative projects. Built with React, Vite, and Tailwind CSS, the site features responsive layouts, dynamic filtering, and a cohesive visual identity for all my projects."></Summary>
 
                   <div className="mt-6 flex flex-wrap gap-3">
                     <Badge
-                      label="Role"
-                      value="Electronics Lead & Project Coordinator"
-                    />
-                    <Badge
                       label="Tools"
-                      value="Arduino (C++), User-Centred Design, Iterative Prototyping, Agile-Gantt"
+                      value="React, Tailwind CSS, Vite, Vercel, Framer Motion"
                     />
-                    <Badge label="Timeframe" value="May – Jun 2025" />
+                    <Badge label="Timeframe" value="Jul 2025 – Current" />
                   </div>
 
                   <div className="flex flex-wrap gap-3">
                     <Button
                       image="https://img.icons8.com/windows/32/external-link.png"
-                      text="Full Portfolio"
-                      link="/stride-portfolio.pdf"
-                    />
-                    <Button
-                      image="https://img.icons8.com/windows/32/external-link.png"
-                      text="Full Report"
-                      link="/stride-report.pdf"
+                      text="GitHub Repo"
+                      link="https://github.com/larasm192/portfolio-new"
                     />
                   </div>
                 </div>
@@ -111,7 +93,7 @@ export default function Stride() {
               {/* RIGHT SIDE — FULL-HEIGHT IMAGE */}
               <div className="lg:w-2/5">
                 <img
-                  src={StrideImage}
+                  src={render}
                   alt="Mini Monopoly Screenshot"
                   className="h-full w-auto object-cover object-center"
                 />

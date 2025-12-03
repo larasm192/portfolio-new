@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
-import { Navbar, Sidebar, Summary } from "../../components/sections";
-import { Button, Badge } from "../../components/ui";
-import StrideImage from "../../assets/stride-render.svg";
-import vehicleUrl from "../../assets/vehicle2-render.svg";
-import render from "../../assets/pcs.svg";
+import { Navbar, Sidebar, Summary } from "../components/sections";
+import { Button, Badge } from "../components/ui";
+import StrideImage from "../assets/stride-render.svg";
+import vehicleUrl from "../assets/vehicle2-render.svg";
+import render from "../assets/ife.svg";
 
 const sections = [
   { id: "overview", label: "Overview" },
@@ -19,7 +19,7 @@ const sectionComponents = [
   //StrideReflection,
 ];
 
-export default function PCS() {
+export default function IFE() {
   const [activeSection, setActiveSection] = useState("overview");
   const [scrollProgress, setScrollProgress] = useState(0);
 
@@ -68,23 +68,23 @@ export default function PCS() {
               <div className="flex items-center px-24 py-16 lg:w-3/5">
                 <div className="max-w-4xl">
                   <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl">
-                    Plane Crash Survivability
+                    Improving Food Experiences
                   </h1>
-                  <Summary text="Analysed historical aviation crash data (1918–2022) to predict survivability outcomes using machine learning. Applied Decision Trees, Logistic Regression, Support Vector Machines, and Random Forest models in Python to evaluate how flight phase, crash cause, aircraft type, and location influence survival likelihood."></Summary>
+                  <Summary text="Researched and designed solutions to improve food accessibility and nutrition for university student athletes. Combined user interviews, observations and journey mapping to develop concepts that enhance convenience and overall nutritional experience for student atheletes."></Summary>
 
                   <div className="mt-6 flex flex-wrap gap-3">
                     <Badge
                       label="Tools"
-                      value="Python, Pandas, scikit-learn, Google Colab"
+                      value="Figma, Fusion 360, Adobe Creative Suite, Lo-Fi Prototyping"
                     />
-                    <Badge label="Timeframe" value="May – Jun 2025" />
+                    <Badge label="Timeframe" value="Feb – Mar 2025" />
                   </div>
 
                   <div className="flex flex-wrap gap-3">
                     <Button
                       image="https://img.icons8.com/windows/32/external-link.png"
-                      text="Full Report"
-                      link="/pcs-report.pdf"
+                      text="Full Portfolio"
+                      link="/ife-portfolio.pdf"
                     />
                   </div>
                 </div>

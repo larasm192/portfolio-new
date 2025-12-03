@@ -5,22 +5,22 @@ import "./index.css";
 import Home from "./Home.jsx";
 import About from "./About.jsx";
 import Projects from "./Projects.jsx";
-import Monopoly from "./projects/Monopoly/Monopoly.jsx";
-import Stride from "./projects/Stride/Stride.jsx";
-import Vehicle_1 from "./projects/Vehicle 1/Vehicle_1.jsx";
+import Monopoly from "./projects/Monopoly.jsx";
+import Stride from "./projects/Stride.jsx";
+import Vehicle_1 from "./projects/Vehicle_1.jsx";
 import Unfinished from "./Unfinished.jsx";
 import ErrorBoundary from "./components/ErrorBoundary.jsx";
-import Vehicle_2 from "./projects/Vehicle 2/Vehicle_2.jsx";
-import Dancing_Segway from "./projects/Dancing Segway/Dancing_Segway.jsx";
-import RESEAT from "./projects/RESEAT/RESEAT.jsx";
-import REVOLVE from "./projects/REVOLVE/REVOLVE.jsx";
-import IFE from "./projects/IFE/IFE.jsx";
-import FlexiCook from "./projects/FlexiCook/FlexiCook.jsx";
-import PCS from "./projects/PCS/PCS.jsx";
-import Electronics_Car from "./projects/Electronics Car/Electronics_Car.jsx";
-import REVENG from "./projects/REVENG/REVENG.jsx";
-import Materialise from "./projects/Materialise/Materialise.jsx";
-import Portfolio from "./projects/Portfolio/Portfolio.jsx";
+import Vehicle_2 from "./projects/Vehicle_2.jsx";
+import Dancing_Segway from "./projects/Dancing_Segway.jsx";
+import RESEAT from "./projects/RESEAT.jsx";
+import REVOLVE from "./projects/REVOLVE.jsx";
+import IFE from "./projects/IFE.jsx";
+import FlexiCook from "./projects/FlexiCook.jsx";
+import PCS from "./projects/PCS.jsx";
+import Electronics_Car from "./projects/Electronics_Car.jsx";
+import REVENG from "./projects/REVENG.jsx";
+import Materialise from "./projects/Materialise.jsx";
+import Portfolio from "./projects/Portfolio.jsx";
 
 // Add console log for debugging
 const DebugMonopoly = () => {
