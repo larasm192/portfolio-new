@@ -12,8 +12,18 @@ import electricarUrl from "../assets/electricar.svg";
 import dancingsegUrl from "../assets/dancingseg.svg";
 import flexicookUrl from "../assets/flexicook.svg";
 import portfolioUrl from "../assets/portfolio-render.png";
+import ecodashUrl from "../assets/ecodash.png";
 
 export const projects = [
+  {
+    title: "Ecodash",
+    description:
+      "An iOS carbon-intensity dashboard built with Flutter/Dart, powered by a live carbon intensity API.",
+    link: "/ecodash",
+    image: ecodashUrl,
+    skills: ["Flutter", "Dart", "REST APIs"],
+    tags: ["software", "sustainability"],
+  },
   {
     title: "Mini Monopoly",
     description:

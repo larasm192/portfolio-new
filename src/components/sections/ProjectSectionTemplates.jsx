@@ -8,6 +8,9 @@ import {
   IconBox,
   IssueResolutionBox,
   Summary,
+  Accordion,
+  ChallengeList,
+  Timeline,
 } from ".";
 import { Badge, Button } from "../ui";
 import Statistic from "../ui/Statistic";
@@ -106,6 +109,21 @@ export function IconListSection({ id, label, items = [], bg, columns = 3 }) {
   );
 }
 
+export function AccordionSection({
+  id,
+  label,
+  items = [],
+  bg,
+  allowMultiple = false,
+}) {
+  return (
+    <SectionWrapper id={id} bg={bg}>
+      <SectionDivider label={label} />
+      <Accordion items={items} allowMultiple={allowMultiple} />
+    </SectionWrapper>
+  );
+}
+
 export function IssueListSection({ id, label, items = [], bg, paragraphs = [] }) {
   return (
     <SectionWrapper id={id} bg={bg}>
@@ -114,6 +132,24 @@ export function IssueListSection({ id, label, items = [], bg, paragraphs = [] })
         <Paragraph key={idx}>{text}</Paragraph>
       ))}
       <IssueResolutionBox items={items} />
+    </SectionWrapper>
+  );
+}
+
+export function ChallengeSection({ id, label, items = [], bg }) {
+  return (
+    <SectionWrapper id={id} bg={bg}>
+      <SectionDivider label={label} />
+      <ChallengeList items={items} />
+    </SectionWrapper>
+  );
+}
+
+export function TimelineSection({ id, label, items = [], bg }) {
+  return (
+    <SectionWrapper id={id} bg={bg}>
+      <SectionDivider label={label} />
+      <Timeline items={items} />
     </SectionWrapper>
   );
 }

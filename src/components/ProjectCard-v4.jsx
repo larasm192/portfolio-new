@@ -19,6 +19,8 @@ export default function ProjectCardv4({
       <img
         src={image}
         alt={imageAlt || title}
+        loading="lazy"
+        decoding="async"
         className="h-full w-full object-cover object-center"
       />
 

@@ -17,6 +17,8 @@ export default function ProjectCardv2({
           <img
             src={image}
             alt={title}
+            loading="lazy"
+            decoding="async"
             className="h-full w-full object-cover md:rounded-r-xl"
           />
         )}

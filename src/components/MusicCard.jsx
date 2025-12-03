@@ -11,6 +11,8 @@ export default function MusicCard({ title, artist, image, link, date }) {
           <img
             src={image}
             alt={title}
+            loading="lazy"
+            decoding="async"
             className="h-full w-full rounded-xl object-cover"
           />
         )}
