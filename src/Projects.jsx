@@ -3,6 +3,7 @@ import { motion as Motion, AnimatePresence } from "framer-motion";
 import ProjectCardv2 from "./components/ProjectCard-v2.jsx";
 import { useState } from "react";
 import { projectCategories, projects } from "./data/projects.js";
+import { Footer } from "./components/sections";
 
 const categories = projectCategories;
 
@@ -128,6 +129,7 @@ export default function Projects() {
           </Motion.div>
         </section>
       </main>
+      <Footer />
     </>
   );
 }

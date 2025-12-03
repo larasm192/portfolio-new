@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Navbar, Sidebar } from "../components/sections";
+import { Navbar, Sidebar, Footer } from "../components/sections";
 import {
   ProjectHero,
   TextSection,
@@ -104,6 +104,7 @@ export default function REVENG() {
             .map(renderSection)}
         </main>
       </div>
+      <Footer />
     </>
   );
 }

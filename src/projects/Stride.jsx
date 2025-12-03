@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Navbar, Sidebar } from "../components/sections";
+import { Navbar, Sidebar, Footer } from "../components/sections";
 import {
   TextSection,
   PrototypingSection,
@@ -448,6 +448,7 @@ export default function Stride() {
             .map(renderSection)}
         </main>
       </div>
+      <Footer />
     </>
   );
 }

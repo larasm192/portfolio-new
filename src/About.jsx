@@ -1,6 +1,11 @@
 // src/About.jsx
 import { motion as Motion } from "framer-motion";
-import { SectionDivider, Paragraph, Quote } from "./components/sections"; // adjust path if needed
+import {
+  SectionDivider,
+  Paragraph,
+  Quote,
+  Footer,
+} from "./components/sections"; // adjust path if needed
 import Statistic from "./components/ui/Statistic";
 import MusicCard from "./components/MusicCard.jsx";
 import Navbar from "./components/sections/Navbar.jsx";
@@ -430,35 +435,10 @@ export default function About() {
               design, UX, and design-engineering. If my work resonates, I’d love
               to chat.
             </Paragraph>
-
-            <div className="mt-2 flex flex-wrap items-center justify-center gap-3">
-              <a
-                className="aspect-square h-10"
-                href="https://www.linkedin.com/in/lara-merican/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img
-                  src={linkedinUrl}
-                  alt="LinkedIn"
-                  className="aspect-square h-full w-full rounded-xl object-cover"
-                />
-              </a>
-              <a
-                className="aspect-square h-10"
-                href="mailto:mericanlara@gmail.com"
-              >
-                <img
-                  width="50"
-                  height="50"
-                  src="https://img.icons8.com/material-rounded/50/mail.png"
-                  alt="mail"
-                />
-              </a>
-            </div>
           </div>
         </section>
       </main>
+      <Footer />
     </>
   );
 }

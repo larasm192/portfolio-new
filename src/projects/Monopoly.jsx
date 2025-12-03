@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Navbar, Sidebar } from "../components/sections";
+import { Navbar, Sidebar, Footer } from "../components/sections";
 import {
   TextSection,
   IconListSection,
@@ -264,6 +264,7 @@ export default function Monopoly() {
             .map(renderSection)}
         </main>
       </div>
+      <Footer />
     </>
   );
 }

@@ -1,5 +1,4 @@
-import { Navbar } from ".";
-import { Sidebar } from ".";
+import { Navbar, Sidebar, Footer } from ".";
 import { useState, useEffect } from "react";
 
 export default function ProjectPage({
@@ -96,6 +95,7 @@ export default function ProjectPage({
           ))}
         </main>
       </div>
+      <Footer />
     </>
   );
 }

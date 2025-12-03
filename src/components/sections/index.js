@@ -13,3 +13,4 @@ export {
   IterationGallery,
   FeatureList,
 } from "./Prototyping";
+export { default as Footer } from "./Footer";
