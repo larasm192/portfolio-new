@@ -142,7 +142,7 @@ export default function About() {
                   label="Download CV"
                 />
                 <ExternalLinkButton
-                  href="mailto:mericanlara@gmail.com"
+                  href="https://mail.google.com/mail/?view=cm&fs=1&to=mericanlara@gmail.com"
                   target="_blank"
                   rel="noopener noreferrer"
                   label="Email Me"

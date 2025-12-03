@@ -17,7 +17,13 @@ export default function Footer() {
           />
         </a>
 
-        <a className="aspect-square h-10 sm:h-12" href="mailto:mericanlara@gmail.com">
+        <a
+          className="aspect-square h-10 sm:h-12"
+          href="https://mail.google.com/mail/?view=cm&fs=1&to=mericanlara@gmail.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          title="Email Lara (opens Gmail compose)"
+        >
           <img
             width="50"
             height="50"
