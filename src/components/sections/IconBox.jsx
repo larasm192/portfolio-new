@@ -1,5 +1,3 @@
-import React from "react";
-
 export default function IconBox({ items, columns = 3 }) {
   const gridCols = {
     1: "grid-cols-1",

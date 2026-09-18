@@ -1,6 +1,3 @@
-// components/Prototyping.jsx
-import React from "react";
-
 /* ---------- Iteration Gallery ---------- */
 export function IterationGallery({
   title,

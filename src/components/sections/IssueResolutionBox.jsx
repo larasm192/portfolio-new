@@ -1,5 +1,3 @@
-import React from "react";
-
 export default function IssueResolutionBox({ items }) {
   return (
     <div className="space-y-8 pt-8">

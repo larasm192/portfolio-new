@@ -1,19 +1,19 @@
-import React, { useState, useEffect } from "react";
-import { Navbar, Sidebar, Footer } from "../components/sections";
+import { useState, useEffect } from "react";
+import { Navbar, Sidebar, Footer } from "@/components/sections";
 import {
   TextSection,
   IconListSection,
   IssueListSection,
   ProjectHero,
-} from "../components/sections/ProjectSectionTemplates.jsx";
-import MonopolyImage from "../assets/monopoly-render.png";
-import MonopolyProperties from "../assets/monopoly-properties.png";
-import codingUrl from "../assets/coding.png";
-import logicUrl from "../assets/logic.png";
-import accessibilityUrl from "../assets/accessibility.png";
-import MonopolyPopup from "../assets/monopoly-popup.svg";
-import MonopolyAccessibility from "../assets/monopoly-accessibility.jpg";
-import MonopolyNoEnd from "../assets/monopoly-noend.png";
+} from "@/components/sections/ProjectSectionTemplates.jsx";
+import MonopolyImage from "@/assets/monopoly-render.png";
+import MonopolyProperties from "@/assets/monopoly-properties.png";
+import codingUrl from "@/assets/coding.png";
+import logicUrl from "@/assets/logic.png";
+import accessibilityUrl from "@/assets/accessibility.png";
+import MonopolyPopup from "@/assets/monopoly-popup.svg";
+import MonopolyAccessibility from "@/assets/monopoly-accessibility.jpg";
+import MonopolyNoEnd from "@/assets/monopoly-noend.png";
 
 const sectionConfigs = [
   { id: "overview", label: "Overview", type: "overview" },

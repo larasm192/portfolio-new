@@ -1,5 +1,3 @@
-import React from "react";
-
 export default function ImageCard({ src, alt, caption }) {
   return (
     <div className="mt-8">

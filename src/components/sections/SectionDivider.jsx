@@ -1,5 +1,3 @@
-import React from "react";
-
 export function SectionDivider({ label }) {
   return (
     <div className="mx-auto max-w-6xl pb-4">

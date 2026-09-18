@@ -1,9 +1,7 @@
-import React, { useState, useEffect } from "react";
-import { Navbar, Sidebar, Summary, Footer } from "../components/sections";
-import { Button, Badge } from "../components/ui";
-import StrideImage from "../assets/stride-render.svg";
-import vehicleUrl from "../assets/vehicle2-render.svg";
-import render from "../assets/reseat.svg";
+import { useState, useEffect } from "react";
+import { Navbar, Sidebar, Summary, Footer } from "@/components/sections";
+import { Button, Badge } from "@/components/ui";
+import render from "@/assets/reseat.svg";
 
 const sections = [
   { id: "overview", label: "Overview" },

@@ -1,19 +1,19 @@
-import Navbar from "../components/sections/Navbar.jsx";
+import Navbar from "@/components/sections/Navbar.jsx";
 import { motion as Motion } from "framer-motion";
-import arrow2Url from "../assets/arrow-2.svg";
-import arrowUrl from "../assets/arrow.svg";
-import arrow3Url from "../assets/arrow-3.svg";
-import arrow4Url from "../assets/arrow-4.svg";
-import lara2Url from "../assets/lara-2.jpeg";
-import ProjectCardv4 from "../components/ProjectCard-v4.jsx";
-import MusicCard from "../components/MusicCard.jsx";
-import firstlovethingsUrl from "../assets/first-love-things.jpg";
-import ProjectRotator from "../components/sections/ProjectRotator.jsx";
-import StrideTitle from "../assets/stride-title.svg";
-import ReseatTitle from "../assets/reseat-title.svg";
-import MonopolyTitle from "../assets/monopoly-title.svg";
-import { projects } from "../data/projects.js";
-import { Footer } from "../components/sections";
+import arrow2Url from "@/assets/arrow-2.svg";
+import arrowUrl from "@/assets/arrow.svg";
+import arrow3Url from "@/assets/arrow-3.svg";
+import arrow4Url from "@/assets/arrow-4.svg";
+import lara2Url from "@/assets/lara-2.jpeg";
+import ProjectCardv4 from "@/components/ProjectCard-v4.jsx";
+import MusicCard from "@/components/MusicCard.jsx";
+import firstlovethingsUrl from "@/assets/first-love-things.jpg";
+import ProjectRotator from "@/components/sections/ProjectRotator.jsx";
+import StrideTitle from "@/assets/stride-title.svg";
+import ReseatTitle from "@/assets/reseat-title.svg";
+import MonopolyTitle from "@/assets/monopoly-title.svg";
+import { projects } from "@/data/projects.js";
+import { Footer } from "@/components/sections";
 
 export default function Home() {
   const featuredTitles = ["Mini Monopoly", "Stride.", "RESEAT"];

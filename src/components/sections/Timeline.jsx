@@ -1,5 +1,3 @@
-import React from "react";
-
 export default function Timeline({ items = [] }) {
   return (
     <div className="relative mt-4 pl-6">

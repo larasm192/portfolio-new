@@ -1,5 +1,3 @@
-import React from "react";
-
 export default function ChallengeList({ items = [] }) {
   return (
     <div className="mt-4 space-y-6">

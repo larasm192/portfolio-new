@@ -1,4 +1,4 @@
-import linkedinUrl from "../../assets/linkedin.png";
+import linkedinUrl from "@/assets/linkedin.png";
 
 export default function Footer() {
   return (

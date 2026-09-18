@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import { Navbar, Sidebar, Footer } from "../components/sections";
+import { useState, useEffect } from "react";
+import { Navbar, Sidebar, Footer } from "@/components/sections";
 import {
   TextSection,
   IconListSection,
@@ -8,11 +8,11 @@ import {
   AccordionSection,
   ChallengeSection,
   TimelineSection,
-} from "../components/sections/ProjectSectionTemplates.jsx";
-import EcoDashImage from "../assets/ecodash.png";
-import codingUrl from "../assets/coding.png";
-import logicUrl from "../assets/logic.png";
-import accessibilityUrl from "../assets/accessibility.png";
+} from "@/components/sections/ProjectSectionTemplates.jsx";
+import EcoDashImage from "@/assets/ecodash.png";
+import codingUrl from "@/assets/coding.png";
+import logicUrl from "@/assets/logic.png";
+import accessibilityUrl from "@/assets/accessibility.png";
 
 const sectionConfigs = [
   { id: "overview", label: "Overview", type: "overview" },
