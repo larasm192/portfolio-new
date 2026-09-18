@@ -50,7 +50,7 @@ export default function Footer() {
       </div>
 
       <p className="mt-4 text-center text-xs text-gray-500 md:text-sm">
-        Designed and coded by Lara Merican (2025)
+        Designed and coded by Lara Merican (2026)
       </p>
     </footer>
   );

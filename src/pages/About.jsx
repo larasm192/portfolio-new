@@ -5,20 +5,20 @@ import {
   Paragraph,
   Quote,
   Footer,
-} from "./components/sections"; // adjust path if needed
-import Statistic from "./components/ui/Statistic";
-import MusicCard from "./components/MusicCard.jsx";
-import Navbar from "./components/sections/Navbar.jsx";
-import eklsm from "./assets/about-eklsm.JPG";
-import kpop from "./assets/about-kpop.JPG";
-import cats from "./assets/about-cats.jpg";
-import travel from "./assets/about-travel.JPG";
-import portrait from "./assets/about-portrait.jpg";
+} from "../components/sections"; // adjust path if needed
+import Statistic from "../components/ui/Statistic";
+import MusicCard from "../components/MusicCard.jsx";
+import Navbar from "../components/sections/Navbar.jsx";
+import eklsm from "../assets/about-eklsm.JPG";
+import kpop from "../assets/about-kpop.JPG";
+import cats from "../assets/about-cats.jpg";
+import travel from "../assets/about-travel.JPG";
+import portrait from "../assets/about-portrait.jpg";
 
 // Assets (swap to your own)
-import lara1Url from "./assets/lara-1.jpg";
-import linkedinUrl from "./assets/linkedin.png";
-import firstlovethingsUrl from "./assets/first-love-things.jpg";
+import lara1Url from "../assets/lara-1.jpg";
+import linkedinUrl from "../assets/linkedin.png";
+import firstlovethingsUrl from "../assets/first-love-things.jpg";
 
 // Small local component for skill tags
 function SkillPills({ title, items = [] }) {
@@ -280,6 +280,22 @@ export default function About() {
           <div className="mx-auto max-w-6xl">
             <SectionDivider label="Experience & Leadership" />
             <div className="mt-4 grid grid-cols-1 gap-4 md:grid-cols-2">
+              <div className="rounded-2xl bg-neutral-50 p-5 shadow-sm ring-1 ring-neutral-200">
+                <h3 className="text-lg font-semibold">
+                  Frontend Software Developer Intern
+                </h3>
+                <p className="mt-1 text-sm text-neutral-600">
+                  Tewke • Apr 2026 –
+                  Present
+                </p>
+                <ul className="mt-3 list-disc space-y-1 pl-5 text-sm text-neutral-800">
+                  <li>
+                    Developed and tested new features for the Tewke mobile app using
+                    Flutter/Dart, improving user experience and
+                    code maintainability.
+                  </li>
+                </ul>
+              </div>
               <div className="rounded-2xl bg-neutral-50 p-5 shadow-sm ring-1 ring-neutral-200">
                 <h3 className="text-lg font-semibold">
                   Co-President & Treasurer

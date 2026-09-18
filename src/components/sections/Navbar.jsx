@@ -17,6 +17,9 @@ export default function Navbar() {
             <a href="/projects" className="transition hover:text-orange-500">
               Projects
             </a>
+            <a href="/music" className="transition hover:text-orange-500">
+              Music
+            </a>
             <a href="/about-me" className="transition hover:text-orange-500">
               About Me
             </a>
