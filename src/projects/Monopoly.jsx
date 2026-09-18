@@ -5,15 +5,8 @@ import {
   IconListSection,
   IssueListSection,
   ProjectHero,
-} from "@/components/sections/ProjectSectionTemplates.jsx";
-import MonopolyImage from "@/assets/monopoly-render.png";
-import MonopolyProperties from "@/assets/monopoly-properties.png";
-import codingUrl from "@/assets/coding.png";
-import logicUrl from "@/assets/logic.png";
-import accessibilityUrl from "@/assets/accessibility.png";
-import MonopolyPopup from "@/assets/monopoly-popup.svg";
-import MonopolyAccessibility from "@/assets/monopoly-accessibility.jpg";
-import MonopolyNoEnd from "@/assets/monopoly-noend.png";
+} from "@/components/sections/ProjectSectionTemplates";
+import { Assets } from "@/core/assetPaths";
 
 const sectionConfigs = [
   { id: "overview", label: "Overview", type: "overview" },
@@ -36,7 +29,7 @@ const sectionConfigs = [
     ],
     images: [
       {
-        src: MonopolyProperties,
+        src: Assets.monopoly.properties,
         alt: "Monopoly properties named after friends",
         caption: "Monopoly properties named after friends",
       },
@@ -79,7 +72,7 @@ const sectionConfigs = [
     ],
     items: [
       {
-        img: MonopolyPopup,
+        img: Assets.monopoly.popup,
         alt: "Pop-up design",
         issueTitle: "Issue #1",
         issueText:
@@ -89,7 +82,7 @@ const sectionConfigs = [
           "Designed a modular popup component with yes/no buttons and integrated it into gameplay.",
       },
       {
-        img: MonopolyNoEnd,
+        img: Assets.monopoly.noEnd,
         alt: "Money balancing",
         issueTitle: "Issue #2",
         issueText:
@@ -99,7 +92,7 @@ const sectionConfigs = [
           "Calculated an optimal starting balance based on property costs to ensure competitive gameplay; validated via another round of testing.",
       },
       {
-        img: MonopolyAccessibility,
+        img: Assets.monopoly.accessibility,
         alt: "Accessibility improvements",
         issueTitle: "Issue #3",
         issueText:
@@ -125,19 +118,19 @@ const sectionConfigs = [
     bg: "muted",
     items: [
       {
-        img: codingUrl,
+        img: Assets.monopoly.coding,
         alt: "Learning HTML, CSS & JS",
         title: "Learning HTML, CSS & JS",
         text: "As my first fully coded web project, I learned to connect structure, style, and interactivity into one cohesive system.",
       },
       {
-        img: logicUrl,
+        img: Assets.monopoly.logic,
         alt: "Importance of User Testing",
         title: "Importance of User Testing",
         text: "Through their feedback, I learned how iterative testing directly improves both design and technical performance.",
       },
       {
-        img: accessibilityUrl,
+        img: Assets.monopoly.accessibility,
         alt: "Designing for Accessibility",
         title: "Designing for Accessibility",
         text: "Adding keyboard controls and focus states taught me that accessibility is fundamental to functional and inclusive design.",
@@ -256,7 +249,7 @@ export default function Monopoly() {
                 Key metric: 100% core rules covered
               </span>
             }
-            image={{ src: MonopolyImage, alt: "Mini Monopoly Screenshot" }}
+            image={{ src: Assets.monopoly.render, alt: "Mini Monopoly Screenshot" }}
           />
 
           {sectionConfigs

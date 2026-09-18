@@ -26,6 +26,18 @@ import strideBenjamin from "@/assets/stride-benjamin.svg";
 import strideEdith from "@/assets/stride-edith.svg";
 import stridePatricia from "@/assets/stride-patricia.svg";
 
+// ─────────────────────────────
+// MONOPOLY
+// ─────────────────────────────
+import monopolyRender from "@/assets/monopoly-render.png";
+import monopolyProperties from "@/assets/monopoly-properties.png";
+import codingUrl from "@/assets/coding.png";
+import logicUrl from "@/assets/logic.png";
+import accessibilityUrl from "@/assets/accessibility.png";
+import monopolyPopup from "@/assets/monopoly-popup.svg";
+import monopolyAccessibility from "@/assets/monopoly-accessibility.jpg";
+import monopolyNoEnd from "@/assets/monopoly-noend.png";
+
 export const Assets = {
   stride: {
     render: strideRender,
@@ -67,4 +79,15 @@ export const Assets = {
       patricia: stridePatricia,
     },
   },
+
+  monopoly: {
+    render: monopolyRender,
+    properties: monopolyProperties,
+    coding: codingUrl, //TODO move to icons
+    logic: logicUrl, //TODO move to icons
+    accessibilityIcon: accessibilityUrl, //TODO move to icons
+    popup: monopolyPopup,
+    accessibility: monopolyAccessibility,
+    noEnd: monopolyNoEnd
+  }
 };
