@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import { Navbar, Sidebar, Footer } from "../components/sections";
+import { useState, useEffect } from "react";
+import { Navbar, Sidebar, Footer } from "@/components/sections";
 import {
   TextSection,
   PrototypingSection,
@@ -7,31 +7,8 @@ import {
   IconListSection,
   ProjectHero,
   IssueListSection,
-} from "../components/sections/ProjectSectionTemplates.jsx";
-import StrideImage from "../assets/stride-render.svg";
-import StrideFOG from "../assets/stride-fog.jpg";
-import StrideUsers from "../assets/stride-users.svg";
-import StrideUXMap from "../assets/stride-uxmap.svg";
-import StrideIdeationSketches from "../assets/stride-ideation.svg";
-import StrideInitialThoughts from "../assets/stride-initialthoughts.svg";
-import handlev1 from "../assets/stride-handle-v1.png";
-import handlev2 from "../assets/stride-handle-v2.png";
-import handlev3 from "../assets/stride-handle-v3.png";
-import housingv1 from "../assets/stride-housing-v1.png";
-import housingv2 from "../assets/stride-housing-v2.png";
-import basev1 from "../assets/stride-base-v1.png";
-import basev2 from "../assets/stride-base-v2.png";
-import basev3 from "../assets/stride-base-v3.png";
-import StrideFritzing from "../assets/stride-fritzing.jpeg";
-import FinalHandle from "../assets/stride-finalhandle.svg";
-import CMF from "../assets/stride-cmf.svg";
-import Packaging from "../assets/stride-packaging.svg";
-import UserGuide from "../assets/stride-userguide.svg";
-import Sensor from "../assets/stride-sensor.svg";
-import Exploded from "../assets/stride-exploded.svg";
-import Benjamin from "../assets/stride-benjamin.svg";
-import Edith from "../assets/stride-edith.svg";
-import Patricia from "../assets/stride-patricia.svg";
+} from "@/components/sections/ProjectSectionTemplates";
+import { Assets } from "@/core/assetPaths";
 
 const sectionConfigs = [
   { id: "overview", label: "Overview", type: "overview" },
@@ -57,7 +34,7 @@ const sectionConfigs = [
     ],
     images: [
       {
-        src: StrideFOG,
+        src: Assets.stride.fog,
         alt: "Freezing of Gait visual from Balanced Gait Physical Therapy",
         caption: (
           <>
@@ -95,12 +72,12 @@ const sectionConfigs = [
     },
     images: [
       {
-        src: StrideUsers,
+        src: Assets.stride.users,
         alt: "Photos from carehome visits with Parkinson's patients",
         caption: <>Photos from carehome visits with Parkinson's patients</>,
       },
       {
-        src: StrideUXMap,
+        src: Assets.stride.uxMap,
         alt: "UX Journey Map",
         caption: <>UX Journey Map made from personas</>,
       },
@@ -111,7 +88,7 @@ const sectionConfigs = [
         age: 61,
         stage: "Early stage",
         yearsSinceDx: 3,
-        avatar: Benjamin,
+        avatar: Assets.stride.personas.benjamin,
         bio: "Recently diagnosed pianist and granddad-to-be; worries about future independence after tremors interrupted his playing.",
         needs: "ways to keep up hobbies and daily routines.",
         because: "he wants quality time with family and to stay active.",
@@ -123,7 +100,7 @@ const sectionConfigs = [
         age: 74,
         stage: "Severe stage",
         yearsSinceDx: 12,
-        avatar: Edith,
+        avatar: Assets.stride.personas.edith,
         bio: "Care-home resident who loves cooking/knitting; experiences FoG episodes and memory lapses affecting independence.",
         needs: "safe independence for day-to-day tasks.",
         because: "she feels overly reliant on carers and family.",
@@ -135,7 +112,7 @@ const sectionConfigs = [
         age: 62,
         stage: "Caregiver (spouse)",
         yearsSinceDx: 7,
-        avatar: Patricia,
+        avatar: Assets.stride.personas.patricia,
         bio: "Supports husband with moderate PD; wants him to stay socially engaged without highlighting the condition.",
         needs: "discreet support to keep him involved socially.",
         because: "she values his confidence and participation.",
@@ -154,12 +131,12 @@ const sectionConfigs = [
     ],
     images: [
       {
-        src: StrideIdeationSketches,
+        src: Assets.stride.ideation,
         alt: "Sketches from Crazy 8's ideation session",
         caption: <>Sketches from Crazy 8's ideation session</>,
       },
       {
-        src: StrideInitialThoughts,
+        src: Assets.stride.initialThoughts,
         alt: "Initial ideation sketches exploring features",
         caption: (
           <>
@@ -183,17 +160,17 @@ const sectionConfigs = [
         items: [
           {
             label: "V1",
-            img: handlev1,
+            img: Assets.stride.handle.v1,
             why: "Looked modern but uncomfortable; thickness & grip not supportive.",
           },
           {
             label: "V2",
-            img: handlev2,
+            img: Assets.stride.handle.v2,
             why: "Better ergonomics; proportion too small vs. shaft; added constant-vibe button.",
           },
           {
             label: "V3",
-            img: handlev3,
+            img: Assets.stride.handle.v3,
             why: "",
             isFinal: true,
             finalWhy:
@@ -207,10 +184,10 @@ const sectionConfigs = [
         items: [
           {
             label: "V1",
-            img: housingv1,
+            img: Assets.stride.housing.v1,
             why: "Too tall/slender; perceived volume unbalanced.",
           },
-          { label: "V2", img: housingv2, why: "", isFinal: true },
+          { label: "V2", img: Assets.stride.housing.v2, why: "", isFinal: true },
         ],
         finalRationale:
           "Shorter, thicker cylinder looks proportionate and fits perpendicular motor + electronics cleanly.",
@@ -221,15 +198,15 @@ const sectionConfigs = [
         items: [
           {
             label: "V1",
-            img: basev1,
+            img: Assets.stride.base.v1,
             why: "Too small; tips non-replaceable; missed ISO 6.3.3.",
           },
           {
             label: "V2",
-            img: basev2,
+            img: Assets.stride.base.v2,
             why: "Too large; violated ISO 6.3.5 (>40 mm clearance).",
           },
-          { label: "V3", img: basev3, why: "", isFinal: true },
+          { label: "V3", img: Assets.stride.base.v3, why: "", isFinal: true },
         ],
         finalRationale:
           "1.2× V1 improves stability & proportion; rubber ferrule adds flex for unobtrusive gait.",
@@ -237,7 +214,7 @@ const sectionConfigs = [
       {
         type: "electronics",
         title: "Electronics",
-        fritzingImg: StrideFritzing,
+        fritzingImg: Assets.stride.fritzing,
         fritzingAlt:
           "Stride electronics (Arduino Nano, N20 gear motor, RGB + IR sensors, LED, DRV8833, 7.4V battery).",
         features: [
@@ -271,12 +248,12 @@ const sectionConfigs = [
     type: "images",
     bg: "muted",
     images: [
-      { src: FinalHandle, alt: "Final handle render" },
-      { src: Sensor, alt: "Stride sensor detail" },
-      { src: CMF, alt: "Stride CMF board" },
-      { src: Packaging, alt: "Stride packaging" },
-      { src: UserGuide, alt: "Stride user guide" },
-      { src: Exploded, alt: "Stride exploded view" },
+      { src: Assets.stride.finalHandle, alt: "Final handle render" },
+      { src: Assets.stride.sensor, alt: "Stride sensor detail" },
+      { src: Assets.stride.cmf, alt: "Stride CMF board" },
+      { src: Assets.stride.packaging, alt: "Stride packaging" },
+      { src: Assets.stride.userGuide, alt: "Stride user guide" },
+      { src: Assets.stride.exploded, alt: "Stride exploded view" },
     ],
   },
   {
@@ -439,7 +416,7 @@ export default function Stride() {
                 link: "/stride-report.pdf",
               },
             ]}
-            image={{ src: StrideImage, alt: "Stride render" }}
+            image={{ src: Assets.stride.render, alt: "Stride render" }}
           />
 
           {/* Render custom sections */}
