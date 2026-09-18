@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from "react";
-import { Navbar, Sidebar, Footer } from "../components/sections";
+import { useState, useEffect } from "react";
+import { Navbar, Sidebar, Footer } from "@/components/sections";
 import {
   ProjectHero,
   TextSection,
-} from "../components/sections/ProjectSectionTemplates.jsx";
-import render from "../assets/reveng.svg";
+} from "@/components/sections/ProjectSectionTemplates.jsx";
+import render from "@/assets/reveng.svg";
 
 const sectionConfigs = [
   { id: "overview", label: "Overview", type: "overview" },

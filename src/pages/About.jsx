@@ -5,20 +5,14 @@ import {
   Paragraph,
   Quote,
   Footer,
-} from "../components/sections"; // adjust path if needed
-import Statistic from "../components/ui/Statistic";
-import MusicCard from "../components/MusicCard.jsx";
-import Navbar from "../components/sections/Navbar.jsx";
-import eklsm from "../assets/about-eklsm.JPG";
-import kpop from "../assets/about-kpop.JPG";
-import cats from "../assets/about-cats.jpg";
-import travel from "../assets/about-travel.JPG";
-import portrait from "../assets/about-portrait.jpg";
-
-// Assets (swap to your own)
-import lara1Url from "../assets/lara-1.jpg";
-import linkedinUrl from "../assets/linkedin.png";
-import firstlovethingsUrl from "../assets/first-love-things.jpg";
+} from "@/components/sections"; // adjust path if needed
+import Statistic from "@/components/ui/Statistic";
+import Navbar from "@/components/sections/Navbar.jsx";
+import eklsm from "@/assets/about-eklsm.JPG";
+import kpop from "@/assets/about-kpop.JPG";
+import cats from "@/assets/about-cats.jpg";
+import travel from "@/assets/about-travel.JPG";
+import portrait from "@/assets/about-portrait.jpg";
 
 // Small local component for skill tags
 function SkillPills({ title, items = [] }) {

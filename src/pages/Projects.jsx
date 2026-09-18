@@ -1,9 +1,9 @@
-import Navbar from "../components/sections/Navbar.jsx";
+import Navbar from "@/components/sections/Navbar.jsx";
 import { motion as Motion, AnimatePresence } from "framer-motion";
-import ProjectCardv2 from "../components/ProjectCard-v2.jsx";
+import ProjectCardv2 from "@/components/ProjectCard-v2.jsx";
 import { useState } from "react";
-import { projectCategories, projects } from "../data/projects.js";
-import { Footer } from "../components/sections/index.js";
+import { projectCategories, projects } from "@/data/projects.js";
+import { Footer } from "@/components/sections/index.js";
 
 const categories = projectCategories;
 
