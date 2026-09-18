@@ -1,5 +1,4 @@
 import React from "react";
-import { motion as Motion, AnimatePresence } from "framer-motion";
 
 /**
  * Renders ONE project at a time and rotates through them.

@@ -1,9 +1,6 @@
 import { useState, useEffect } from "react";
-import { Navbar, Sidebar, Footer } from "@/components/sections";
-import {
-  ProjectHero,
-  TextSection,
-} from "@/components/sections/ProjectSectionTemplates.jsx";
+
+
 import render from "@/assets/reveng.svg";
 
 const sectionConfigs = [

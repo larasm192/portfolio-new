@@ -1,6 +1,4 @@
 import { useState, useEffect } from "react";
-import { Navbar, Sidebar, Summary, Footer } from "@/components/sections";
-import { Button, Badge } from "@/components/ui";
 import render from "@/assets/revolve.svg";
 
 const sections = [

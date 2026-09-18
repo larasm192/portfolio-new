@@ -1,14 +1,5 @@
 import { useState, useEffect } from "react";
-import { Navbar, Sidebar, Footer } from "@/components/sections";
-import {
-  TextSection,
-  IconListSection,
-  IssueListSection,
-  ProjectHero,
-  AccordionSection,
-  ChallengeSection,
-  TimelineSection,
-} from "@/components/sections/ProjectSectionTemplates.jsx";
+
 import EcoDashImage from "@/assets/ecodash.png";
 import codingUrl from "@/assets/coding.png";
 import logicUrl from "@/assets/logic.png";

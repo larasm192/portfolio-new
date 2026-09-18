@@ -1,13 +1,6 @@
-import { StrictMode, Suspense, lazy } from "react";
+import { lazy } from "react";
 import { createRoot } from "react-dom/client";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./index.css";
-import Home from "./pages/Home.jsx";
-import About from "./pages/About.jsx";
-import Projects from "./pages/Projects.jsx";
-import Music from "./pages/Music.jsx";
-import Unfinished from "./Unfinished.jsx";
-import ErrorBoundary from "./components/ErrorBoundary.jsx";
 
 // Lazy-load project pages so the homepage bundle stays small.
 const Monopoly = lazy(() => import("@/projects/Monopoly.jsx"));

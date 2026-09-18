@@ -1,4 +1,3 @@
-import { Navbar, Sidebar, Footer } from ".";
 import { useState, useEffect } from "react";
 
 export default function ProjectPage({
@@ -41,7 +40,7 @@ export default function ProjectPage({
     handleScroll();
 
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [sections]);
 
   return (
     <>

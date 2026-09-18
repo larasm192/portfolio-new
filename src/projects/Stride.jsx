@@ -1,13 +1,6 @@
 import { useState, useEffect } from "react";
-import { Navbar, Sidebar, Footer } from "@/components/sections";
-import {
-  TextSection,
-  PrototypingSection,
-  ImagesSection,
-  IconListSection,
-  ProjectHero,
-  IssueListSection,
-} from "@/components/sections/ProjectSectionTemplates";
+
+
 import { Assets } from "@/core/assetPaths";
 
 const sectionConfigs = [

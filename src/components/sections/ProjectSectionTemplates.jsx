@@ -1,19 +1,5 @@
-import {
-  SectionDivider,
-  Paragraph,
-  ImageCard,
-  Quote,
-  PersonasGrid,
-  PrototypingBlock,
-  IconBox,
-  IssueResolutionBox,
-  Summary,
-  Accordion,
-  ChallengeList,
-  Timeline,
-} from ".";
-import { Badge, Button } from "../ui";
-import Statistic from "../ui/Statistic";
+
+
 
 const SectionWrapper = ({ id, bg = "white", children }) => {
   const bgClass = bg === "muted" ? "bg-neutral-50" : "bg-white";

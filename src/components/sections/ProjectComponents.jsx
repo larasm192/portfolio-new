@@ -1,4 +1,3 @@
-import { motion as Motion } from "framer-motion";
 
 export function MiniStat({ label, value, hint }) {
   return (

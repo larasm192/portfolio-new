@@ -1,11 +1,6 @@
 // src/About.jsx
-import { motion as Motion } from "framer-motion";
-import {
-  SectionDivider,
-  Paragraph,
-  Footer,
-} from "@/components/sections"; 
-import Navbar from "@/components/sections/Navbar.jsx";
+
+
 import portrait from "@/assets/about-portrait.jpg";
 
 export default function Music() {

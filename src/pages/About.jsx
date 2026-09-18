@@ -1,13 +1,6 @@
 // src/About.jsx
-import { motion as Motion } from "framer-motion";
-import {
-  SectionDivider,
-  Paragraph,
-  Quote,
-  Footer,
-} from "@/components/sections"; // adjust path if needed
-import Statistic from "@/components/ui/Statistic";
-import Navbar from "@/components/sections/Navbar.jsx";
+
+// adjust path if needed
 import eklsm from "@/assets/about-eklsm.JPG";
 import kpop from "@/assets/about-kpop.JPG";
 import cats from "@/assets/about-cats.jpg";

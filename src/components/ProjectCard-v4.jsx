@@ -1,5 +1,3 @@
-import React from "react";
-import { motion as Motion } from "framer-motion";
 
 export default function ProjectCardv4({
   title,

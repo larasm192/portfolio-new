@@ -1,6 +1,4 @@
-import React, { useState, useEffect } from "react";
-import { Navbar, Sidebar, Summary, Footer } from "@/components/sections";
-import { Badge } from "@/components/ui";
+import { useState, useEffect } from "react";
 import render from "@/assets/electricar.svg";
 
 const sections = [

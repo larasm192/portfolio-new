@@ -1,6 +1,4 @@
-import React, { useState, useEffect } from "react";
-import { Navbar, Sidebar, Summary, Footer } from "@/components/sections";
-import { Button, Badge } from "@/components/ui";
+import { useState, useEffect } from "react";
 import render from "@/assets/flexicook.svg";
 
 const sections = [
